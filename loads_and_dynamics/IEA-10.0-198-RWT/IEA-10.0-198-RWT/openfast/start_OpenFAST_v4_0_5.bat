@@ -10,6 +10,6 @@ ECHO * ----------------------------------------------------
 ECHO * %PATH%
 ECHO *
 REM - Call FAST ---------------------------------------------------------------------
-	openfast_x64 IEA-10.0-198-RWT.fst
+	openfast_x64_v4.exe IEA-10.0-198-RWT.fst
 PAUSE
 EXIT /B
