@@ -1,0 +1,53 @@
+The OpenFAST files have been downloaded from
+https://github.com/IEAWindTask37/IEA-15-240-RWT
+using the last commit in OpenFAST folder before changing to v3.1 on March 3, 2022:
+gbarter: reducing test time and aligning all input files to v3, ed7e726, on Feb 25
+https://github.com/IEAWindTask37/IEA-15-240-RWT/tree/ed7e726062a1355fd0355cdb4fba739fb682ff9e
+
+Modifications:
+--------------
+Following files/folders are copied from the IEA-15-240-RWT into the IEA-15-240-RWT-Monopile folder to have a single template folder:
+Cp_Ct_Cq.IEA15MW.txt
+IEA-15-240-RWT_AeroDyn15.dat
+IEA-15-240-RWT_AeroDyn15_blade.dat
+IEA-15-240-RWT_ElastoDyn_blade.dat
+IEA-15-240-RWT_InflowFile.dat
+Airfoils
+
+From the LidarAssistedControl repository into the ServoData Folder
+ROSCO_v2d6.dll
+ROSCO_v2d6.IN
+Cp_Ct_Cq.IEA15MW.txt
+
+Removed files:
+ServoData\IEA15MW-Monopile.yaml
+DISCON-Monopile.IN
+Cp_Ct_Cq.IEA15MW.txt (does not fit to new ROSCO_v2d6)
+IEA-15-240-RWT-Monopile_HydroDyn.dat (for simplification)
+IEA-15-240-RWT-Monopile_SubDyn.dat (for simplification)
+
+File Modifications (details see github):
+----------------------------------------
+IEA-15-240-RWT-Monopile.fst: 
+* remove "../IEA-15-240-RWT/", since alle files are in one folder
+* set OutFileFmt to 2, since only binary files are needed
+* add CompLidar and SWELidarFile to use lidar simulator
+* change dt to 0.0125 s (80 Hz) to be consistent with the other cases
+* change TMax to 30 s to have shorter test run
+* set CompHydro and CompSub to 0 for simplification
+* set all files to none, if not used 
+IEA-15-240-RWT_InflowFile.dat:
+* change to 18 m/s to be consistent with the other cases
+* change PLexp to 0.2 to be consistent with turbulent wind fields
+IEA-15-240-RWT-Monopile_ServoDyn.dat:
+* set DLL_FileName and DLL_InFile to use the modified ROSCO_v2d6
+* add InitGenTrq to be able to initialize generator torque 
+* set SumPrint to false to limit number of files generated
+IEA-15-240-RWT-Monopile_ElastoDyn.dat
+* set Platform DOFs to False for simplification 
+* set initial conditions for blade pitch and rotor speed to meet 18 m/s
+* remove "../IEA-15-240-RWT/", since alle files are in one folder
+* set SumPrint to false to limit number of files generated
+* simplify outlist
+IEA-15-240-RWT_AeroDyn15.dat:
+* simplify outlist
