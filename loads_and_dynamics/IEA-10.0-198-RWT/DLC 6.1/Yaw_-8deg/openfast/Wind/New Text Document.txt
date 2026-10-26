@@ -1,0 +1,1 @@
+cd /d "G:\Mechanical Engineering\Master\Project\new project 2026\IEA-10.0-198-RWT\DLC 6.1\openfast\Wind"
