@@ -1,0 +1,11 @@
+*.asv
+*.outb
+*.out
+*.dbg
+*.pyc
+.idea/
+TurbulentWind*
+SimulationResults*
+slprj
+*.slxc
+LidarAssistedControl.egg-info
