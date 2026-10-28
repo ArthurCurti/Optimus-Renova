@@ -66,7 +66,7 @@
 1500000.000000      ! VS_MaxRat			- Maximum torque rate (in absolute value) in torque controller, [Nm/s].
 13449246.58944      ! VS_MaxTq			- Maximum generator torque in Region 3 (HSS side), [Nm].
 0.000000000000      ! VS_MinTq			- Minimum generator torque (HSS side), [Nm].
-0.363070000000      ! VS_MinOMSpd		- Minimum generator speed [rad/s]
+0.733038285838      ! VS_MinOMSpd		- Minimum generator speed [rad/s]
 15436567.62804      ! VS_Rgn2K			- Generator torque constant in Region 2 (HSS side), [Nm/(rad/s)^2]
 10000000.00000      ! VS_RtPwr			- Wind turbine rated power [W]
 12226587.80858      ! VS_RtTq			- Rated torque, [Nm].
