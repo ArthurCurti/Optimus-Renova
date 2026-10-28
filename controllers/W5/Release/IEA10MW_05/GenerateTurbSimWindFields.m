@@ -9,6 +9,10 @@ addpath(genpath('..\WetiMatlabFunctions'))
 % Parameters (can be adjusted, but will provide different results)
 URef_vector         = 4:2:24;   % [m/s]         range of wind speeds (operation points)
 n_Seed              = 6;        % [-]           number of stochastic turbulence field seeds
+R                   = 198/2;    % [m]           rotor radius for REWS calculation
+MyXlim              = [60 660]; % [s]           time limits for RWES plot representing the analyzed simulation time
+GenerateUniformWind = true;     % [true/false]  flag to generate uniform wind for perfect preview
+alpha               = 0.14;     % [-]           vertical power-law wind-shear exponent, same as in TurbSimInputFileTemplateIEA10MW.inp
 
 % Seed Matrix Definition
 Seed_vector         = [1:n_Seed];
@@ -50,3 +54,63 @@ end
 
 % Clean up
 delete(['TurbulentWind\',TurbSimExeFile])
+
+%% Calculate REWS
+REWS = cell(n_URef,n_Seed);
+
+figure
+for i_URef    = 1:n_URef
+    subplot(n_URef,1,i_URef);
+    hold on;box on;grid on
+    URef      = URef_vector(i_URef);
+    for i_Seed = 1:n_Seed        
+        Seed                        = Seed_matrix(i_URef,i_Seed);
+        WindFileName                = ['URef_',num2str(URef,'%02d'),'_Seed_',num2str(i_Seed,'%02d')];
+        TurbSimResultFile  	        = ['TurbulentWind\',WindFileName,'.wnd'];
+
+        [REWS_WindField,Time_WindField]  	= CalculateREWSfromWindField(TurbSimResultFile,R,2);  
+
+        REWS{i_URef,i_Seed}.Time    = Time_WindField;
+        REWS{i_URef,i_Seed}.Data    = REWS_WindField;
+
+        % plot
+        plot(Time_WindField,REWS_WindField)     
+
+    end
+    title(URef+" m/s")
+    xlim(MyXlim)
+    ylabel('REWS [m/s]')
+end
+xlabel('time [s]')
+
+
+%% Generate Uniform wind
+if GenerateUniformWind
+
+    % Generate folder 
+    if ~exist('UniformWind','dir')
+        mkdir UniformWind
+    end
+
+    % loop over wind speeds and seeds
+    for i_URef    = 1:n_URef
+        URef      = URef_vector(i_URef);
+        for i_Seed = 1:n_Seed        
+
+            % get details
+            Seed                        = Seed_matrix(i_URef,i_Seed);
+            WindFileName                = ['URef_',num2str(URef,'%02d'),'_Seed_',num2str(i_Seed,'%02d')];
+            ResultFile  	            = ['UniformWind\',WindFileName,'.wnd'];
+            n_data                      = length(REWS{i_URef,i_Seed}.Data);
+            t                           = REWS{i_URef,i_Seed}.Time;
+            u                           = REWS{i_URef,i_Seed}.Data;
+
+            % write file
+            fid = fopen(ResultFile,'w+');
+            fprintf(fid,['%f,%f,%f,%f,%f,%f,%f,%f\r\n'],[t u zeros(n_data,3)  ones(n_data,1)*alpha zeros(n_data,2)]');
+            fclose(fid);
+            
+        end
+    end
+
+end
