@@ -1,0 +1,872 @@
+-----  MExtremes v1.00.00g-mlb Input File  -------------------------------------------
+OptimusLE WS20/21
+-----  Job Options  ------------------------------------------------------------
+false             EchoInp           Echo input to <rootname>.echo as this file is being read.
+true              StrNames          Use channel names following a "$" instead of numbers when specifying channels in this input file.
+"%11.3g"          RealFmt           Format for outputting floating-point values in the plain-text files.
+-----  Input-Data Layout  ------------------------------------------------------
+0                 TitleLine         The row with the file title on it (zero if no title is available).
+0                 NamesLine         The row with the channel names on it (zero if no names are available or are specified below).
+0                 UnitsLine         The row with the channel units on it (zero if no units are available or are specified below).
+9                 FirstDataLine     The first row of data.
+256               NumChans:         The number of channels in each input file.
+ChanTitle    ChanUnits    Scale  Offset	PSFtype     NumCols rows of data follow.  Title and units strings must be 10 characters or less.
+"Time"		"(s)"		1.0		0.0		0
+"Wind1VelX"		"(m/s)"		1.0		0.0		0
+"Wind1VelY"		"(m/s)"		1.0		0.0		0
+"Wind1VelZ"		"(m/s)"		1.0		0.0		0
+"BldPitch1"		"(deg)"		1.0		0.0		0
+"BldPitch2"		"(deg)"		1.0		0.0		0
+"BldPitch3"		"(deg)"		1.0		0.0		0
+"Azimuth"		"(deg)"		1.0		0.0		0
+"RotSpeed"		"(rpm)"		1.0		0.0		0
+"OoPDefl1"		"(m)"		1.0		0.0		2
+"IPDefl1"		"(m)"		1.0		0.0		2
+"TipDzb1"		"(m)"		1.0		0.0		2
+"OoPDefl2"		"(m)"		1.0		0.0		2
+"IPDefl2"		"(m)"		1.0		0.0		2
+"TipDzb2"		"(m)"		1.0		0.0		2
+"OoPDefl3"		"(m)"		1.0		0.0		2
+"IPDefl3"		"(m)"		1.0		0.0		2
+"TipDzb3"		"(m)"		1.0		0.0		2
+"LSSTipPxa"		"(deg)"		1.0		0.0		0
+"LSSTipVxa"		"(rpm)"		1.0		0.0		0
+"LSSTipAxa"		"(deg/s^2)"		1.0		0.0		0
+"HSShftV"		"(rpm)"		1.0		0.0		0
+"YawPzn"		"(deg)"		1.0		0.0		0
+"TwrTpTDxi"		"(m)"		1.0		0.0		0
+"TwrTpTDyi"		"(m)"		1.0		0.0		0
+"TwrTpTDzi"		"(m)"		1.0		0.0		0
+"RootFxc1"		"(kN)"		1.0		0.0		1
+"RootFyc1"		"(kN)"		1.0		0.0		1
+"RootFzb1"		"(kN)"		1.0		0.0		1
+"RootFxb1"		"(kN)"		1.0		0.0		1
+"RootFyb1"		"(kN)"		1.0		0.0		1
+"RootMxc1"		"(kN-m)"		1.0		0.0		1
+"RootMyc1"		"(kN-m)"		1.0		0.0		1
+"RootMzb1"		"(kN-m)"		1.0		0.0		1
+"RootMxb1"		"(kN-m)"		1.0		0.0		1
+"RootMyb1"		"(kN-m)"		1.0		0.0		1
+"RootFxc2"		"(kN)"		1.0		0.0		1
+"RootFyc2"		"(kN)"		1.0		0.0		1
+"RootFzb2"		"(kN)"		1.0		0.0		1
+"RootFxb2"		"(kN)"		1.0		0.0		1
+"RootFyb2"		"(kN)"		1.0		0.0		1
+"RootMxc2"		"(kN-m)"		1.0		0.0		1
+"RootMyc2"		"(kN-m)"		1.0		0.0		1
+"RootMzb2"		"(kN-m)"		1.0		0.0		1
+"RootMxb2"		"(kN-m)"		1.0		0.0		1
+"RootMyb2"		"(kN-m)"		1.0		0.0		1
+"RootFxc3"		"(kN)"		1.0		0.0		1
+"RootFyc3"		"(kN)"		1.0		0.0		1
+"RootFzb3"		"(kN)"		1.0		0.0		1
+"RootFxb3"		"(kN)"		1.0		0.0		1
+"RootFyb3"		"(kN)"		1.0		0.0		1
+"RootMxc3"		"(kN-m)"		1.0		0.0		1
+"RootMyc3"		"(kN-m)"		1.0		0.0		1
+"RootMzb3"		"(kN-m)"		1.0		0.0		1
+"RootMxb3"		"(kN-m)"		1.0		0.0		1
+"RootMyb3"		"(kN-m)"		1.0		0.0		1
+"Spn1MLxb1"		"(kN-m)"		1.0		0.0		1
+"Spn1MLyb1"		"(kN-m)"		1.0		0.0		1
+"Spn1MLzb1"		"(kN-m)"		1.0		0.0		1
+"Spn2MLxb1"		"(kN-m)"		1.0		0.0		1
+"Spn2MLyb1"		"(kN-m)"		1.0		0.0		1
+"Spn2MLzb1"		"(kN-m)"		1.0		0.0		1
+"Spn3MLxb1"		"(kN-m)"		1.0		0.0		1
+"Spn3MLyb1"		"(kN-m)"		1.0		0.0		1
+"Spn3MLzb1"		"(kN-m)"		1.0		0.0		1
+"Spn4MLxb1"		"(kN-m)"		1.0		0.0		1
+"Spn4MLyb1"		"(kN-m)"		1.0		0.0		1
+"Spn4MLzb1"		"(kN-m)"		1.0		0.0		1
+"Spn5MLxb1"		"(kN-m)"		1.0		0.0		1
+"Spn5MLyb1"		"(kN-m)"		1.0		0.0		1
+"Spn5MLzb1"		"(kN-m)"		1.0		0.0		1
+"Spn6MLxb1"		"(kN-m)"		1.0		0.0		1
+"Spn6MLyb1"		"(kN-m)"		1.0		0.0		1
+"Spn6MLzb1"		"(kN-m)"		1.0		0.0		1
+"Spn7MLxb1"		"(kN-m)"		1.0		0.0		1
+"Spn7MLyb1"		"(kN-m)"		1.0		0.0		1
+"Spn7MLzb1"		"(kN-m)"		1.0		0.0		1
+"Spn8MLxb1"		"(kN-m)"		1.0		0.0		1
+"Spn8MLyb1"		"(kN-m)"		1.0		0.0		1
+"Spn8MLzb1"		"(kN-m)"		1.0		0.0		1
+"Spn9MLxb1"		"INVALID"		1.0		0.0		1
+"Spn9MLyb1"		"INVALID"		1.0		0.0		1
+"Spn9MLzb1"		"INVALID"		1.0		0.0		1
+"Spn1FLxb1"		"(kN)"		1.0		0.0		1
+"Spn1FLyb1"		"(kN)"		1.0		0.0		1
+"Spn1FLzb1"		"(kN)"		1.0		0.0		1
+"Spn2FLxb1"		"(kN)"		1.0		0.0		1
+"Spn2FLyb1"		"(kN)"		1.0		0.0		1
+"Spn2FLzb1"		"(kN)"		1.0		0.0		1
+"Spn3FLxb1"		"(kN)"		1.0		0.0		1
+"Spn3FLyb1"		"(kN)"		1.0		0.0		1
+"Spn3FLzb1"		"(kN)"		1.0		0.0		1
+"Spn4FLxb1"		"(kN)"		1.0		0.0		1
+"Spn4FLyb1"		"(kN)"		1.0		0.0		1
+"Spn4FLzb1"		"(kN)"		1.0		0.0		1
+"Spn5FLxb1"		"(kN)"		1.0		0.0		1
+"Spn5FLyb1"		"(kN)"		1.0		0.0		1
+"Spn5FLzb1"		"(kN)"		1.0		0.0		1
+"Spn6FLxb1"		"(kN)"		1.0		0.0		1
+"Spn6FLyb1"		"(kN)"		1.0		0.0		1
+"Spn6FLzb1"		"(kN)"		1.0		0.0		1
+"Spn7FLxb1"		"(kN)"		1.0		0.0		1
+"Spn7FLyb1"		"(kN)"		1.0		0.0		1
+"Spn7FLzb1"		"(kN)"		1.0		0.0		1
+"Spn8FLxb1"		"(kN)"		1.0		0.0		1
+"Spn8FLyb1"		"(kN)"		1.0		0.0		1
+"Spn8FLzb1"		"(kN)"		1.0		0.0		1
+"Spn9FLxb1"		"INVALID"		1.0		0.0		1
+"Spn9FLyb1"		"INVALID"		1.0		0.0		1
+"Spn9FLzb1"		"INVALID"		1.0		0.0		1
+"Spn1MLxb2"		"(kN-m)"		1.0		0.0		1
+"Spn1MLyb2"		"(kN-m)"		1.0		0.0		1
+"Spn1MLzb2"		"(kN-m)"		1.0		0.0		1
+"Spn2MLxb2"		"(kN-m)"		1.0		0.0		1
+"Spn2MLyb2"		"(kN-m)"		1.0		0.0		1
+"Spn2MLzb2"		"(kN-m)"		1.0		0.0		1
+"Spn3MLxb2"		"(kN-m)"		1.0		0.0		1
+"Spn3MLyb2"		"(kN-m)"		1.0		0.0		1
+"Spn3MLzb2"		"(kN-m)"		1.0		0.0		1
+"Spn4MLxb2"		"(kN-m)"		1.0		0.0		1
+"Spn4MLyb2"		"(kN-m)"		1.0		0.0		1
+"Spn4MLzb2"		"(kN-m)"		1.0		0.0		1
+"Spn5MLxb2"		"(kN-m)"		1.0		0.0		1
+"Spn5MLyb2"		"(kN-m)"		1.0		0.0		1
+"Spn5MLzb2"		"(kN-m)"		1.0		0.0		1
+"Spn6MLxb2"		"(kN-m)"		1.0		0.0		1
+"Spn6MLyb2"		"(kN-m)"		1.0		0.0		1
+"Spn6MLzb2"		"(kN-m)"		1.0		0.0		1
+"Spn7MLxb2"		"(kN-m)"		1.0		0.0		1
+"Spn7MLyb2"		"(kN-m)"		1.0		0.0		1
+"Spn7MLzb2"		"(kN-m)"		1.0		0.0		1
+"Spn8MLxb2"		"(kN-m)"		1.0		0.0		1
+"Spn8MLyb2"		"(kN-m)"		1.0		0.0		1
+"Spn8MLzb2"		"(kN-m)"		1.0		0.0		1
+"Spn9MLxb2"		"INVALID"		1.0		0.0		1
+"Spn9MLyb2"		"INVALID"		1.0		0.0		1
+"Spn9MLzb2"		"INVALID"		1.0		0.0		1
+"Spn1FLxb2"		"(kN)"		1.0		0.0		1
+"Spn1FLyb2"		"(kN)"		1.0		0.0		1
+"Spn1FLzb2"		"(kN)"		1.0		0.0		1
+"Spn2FLxb2"		"(kN)"		1.0		0.0		1
+"Spn2FLyb2"		"(kN)"		1.0		0.0		1
+"Spn2FLzb2"		"(kN)"		1.0		0.0		1
+"Spn3FLxb2"		"(kN)"		1.0		0.0		1
+"Spn3FLyb2"		"(kN)"		1.0		0.0		1
+"Spn3FLzb2"		"(kN)"		1.0		0.0		1
+"Spn4FLxb2"		"(kN)"		1.0		0.0		1
+"Spn4FLyb2"		"(kN)"		1.0		0.0		1
+"Spn4FLzb2"		"(kN)"		1.0		0.0		1
+"Spn5FLxb2"		"(kN)"		1.0		0.0		1
+"Spn5FLyb2"		"(kN)"		1.0		0.0		1
+"Spn5FLzb2"		"(kN)"		1.0		0.0		1
+"Spn6FLxb2"		"(kN)"		1.0		0.0		1
+"Spn6FLyb2"		"(kN)"		1.0		0.0		1
+"Spn6FLzb2"		"(kN)"		1.0		0.0		1
+"Spn7FLxb2"		"(kN)"		1.0		0.0		1
+"Spn7FLyb2"		"(kN)"		1.0		0.0		1
+"Spn7FLzb2"		"(kN)"		1.0		0.0		1
+"Spn8FLxb2"		"(kN)"		1.0		0.0		1
+"Spn8FLyb2"		"(kN)"		1.0		0.0		1
+"Spn8FLzb2"		"(kN)"		1.0		0.0		1
+"Spn9FLxb2"		"INVALID"		1.0		0.0		1
+"Spn9FLyb2"		"INVALID"		1.0		0.0		1
+"Spn9FLzb2"		"INVALID"		1.0		0.0		1
+"Spn1MLxb3"		"(kN-m)"		1.0		0.0		1
+"Spn1MLyb3"		"(kN-m)"		1.0		0.0		1
+"Spn1MLzb3"		"(kN-m)"		1.0		0.0		1
+"Spn2MLxb3"		"(kN-m)"		1.0		0.0		1
+"Spn2MLyb3"		"(kN-m)"		1.0		0.0		1
+"Spn2MLzb3"		"(kN-m)"		1.0		0.0		1
+"Spn3MLxb3"		"(kN-m)"		1.0		0.0		1
+"Spn3MLyb3"		"(kN-m)"		1.0		0.0		1
+"Spn3MLzb3"		"(kN-m)"		1.0		0.0		1
+"Spn4MLxb3"		"(kN-m)"		1.0		0.0		1
+"Spn4MLyb3"		"(kN-m)"		1.0		0.0		1
+"Spn4MLzb3"		"(kN-m)"		1.0		0.0		1
+"Spn5MLxb3"		"(kN-m)"		1.0		0.0		1
+"Spn5MLyb3"		"(kN-m)"		1.0		0.0		1
+"Spn5MLzb3"		"(kN-m)"		1.0		0.0		1
+"Spn6MLxb3"		"(kN-m)"		1.0		0.0		1
+"Spn6MLyb3"		"(kN-m)"		1.0		0.0		1
+"Spn6MLzb3"		"(kN-m)"		1.0		0.0		1
+"Spn7MLxb3"		"(kN-m)"		1.0		0.0		1
+"Spn7MLyb3"		"(kN-m)"		1.0		0.0		1
+"Spn7MLzb3"		"(kN-m)"		1.0		0.0		1
+"Spn8MLxb3"		"(kN-m)"		1.0		0.0		1
+"Spn8MLyb3"		"(kN-m)"		1.0		0.0		1
+"Spn8MLzb3"		"(kN-m)"		1.0		0.0		1
+"Spn9MLxb3"		"INVALID"		1.0		0.0		1
+"Spn9MLyb3"		"INVALID"		1.0		0.0		1
+"Spn9MLzb3"		"INVALID"		1.0		0.0		1
+"Spn1FLxb3"		"(kN)"		1.0		0.0		1
+"Spn1FLyb3"		"(kN)"		1.0		0.0		1
+"Spn1FLzb3"		"(kN)"		1.0		0.0		1
+"Spn2FLxb3"		"(kN)"		1.0		0.0		1
+"Spn2FLyb3"		"(kN)"		1.0		0.0		1
+"Spn2FLzb3"		"(kN)"		1.0		0.0		1
+"Spn3FLxb3"		"(kN)"		1.0		0.0		1
+"Spn3FLyb3"		"(kN)"		1.0		0.0		1
+"Spn3FLzb3"		"(kN)"		1.0		0.0		1
+"Spn4FLxb3"		"(kN)"		1.0		0.0		1
+"Spn4FLyb3"		"(kN)"		1.0		0.0		1
+"Spn4FLzb3"		"(kN)"		1.0		0.0		1
+"Spn5FLxb3"		"(kN)"		1.0		0.0		1
+"Spn5FLyb3"		"(kN)"		1.0		0.0		1
+"Spn5FLzb3"		"(kN)"		1.0		0.0		1
+"Spn6FLxb3"		"(kN)"		1.0		0.0		1
+"Spn6FLyb3"		"(kN)"		1.0		0.0		1
+"Spn6FLzb3"		"(kN)"		1.0		0.0		1
+"Spn7FLxb3"		"(kN)"		1.0		0.0		1
+"Spn7FLyb3"		"(kN)"		1.0		0.0		1
+"Spn7FLzb3"		"(kN)"		1.0		0.0		1
+"Spn8FLxb3"		"(kN)"		1.0		0.0		1
+"Spn8FLyb3"		"(kN)"		1.0		0.0		1
+"Spn8FLzb3"		"(kN)"		1.0		0.0		1
+"Spn9FLxb3"		"INVALID"		1.0		0.0		1
+"Spn9FLyb3"		"INVALID"		1.0		0.0		1
+"Spn9FLzb3"		"INVALID"		1.0		0.0		1
+"LSShftFxa"		"(kN)"		1.0		0.0		1
+"LSShftFya"		"(kN)"		1.0		0.0		1
+"LSShftFza"		"(kN)"		1.0		0.0		1
+"LSShftFys"		"(kN)"		1.0		0.0		1
+"LSShftFzs"		"(kN)"		1.0		0.0		1
+"LSShftMxa"		"(kN-m)"		1.0		0.0		1
+"LSSGagMya"		"(kN-m)"		1.0		0.0		1
+"LSSGagMza"		"(kN-m)"		1.0		0.0		1
+"LSSGagMys"		"(kN-m)"		1.0		0.0		1
+"LSSGagMzs"		"(kN-m)"		1.0		0.0		1
+"LSSTipMya"		"(kN-m)"		1.0		0.0		1
+"LSSTipMza"		"(kN-m)"		1.0		0.0		1
+"LSSTipMys"		"(kN-m)"		1.0		0.0		1
+"LSSTipMzs"		"(kN-m)"		1.0		0.0		1
+"RotPwr"		"(kW)"		1.0		0.0		1
+"HSShftTq"		"(kN-m)"		1.0		0.0		1
+"HSSBrTq"		"INVALID"		1.0		0.0		1
+"HSShftPwr"		"(kW)"		1.0		0.0		1
+"TTDspFA"		"(m)"		1.0		0.0		1
+"TTDspSS"		"(m)"		1.0		0.0		1
+"YawBrFxn"		"(kN)"		1.0		0.0		1
+"YawBrFyn"		"(kN)"		1.0		0.0		1
+"YawBrFzp"		"(kN)"		1.0		0.0		1
+"YawBrFxp"		"(kN)"		1.0		0.0		1
+"YawBrFyp"		"(kN)"		1.0		0.0		1
+"YawBrMxn"		"(kN-m)"		1.0		0.0		1
+"YawBrMyn"		"(kN-m)"		1.0		0.0		1
+"YawBrMzp"		"(kN-m)"		1.0		0.0		1
+"YawBrMxp"		"(kN-m)"		1.0		0.0		1
+"YawBrMyp"		"(kN-m)"		1.0		0.0		1
+"TwrBsFxt"		"(kN)"		1.0		0.0		1
+"TwrBsFyt"		"(kN)"		1.0		0.0		1
+"TwrBsFzt"		"(kN)"		1.0		0.0		1
+"TwrBsMxt"		"(kN-m)"		1.0		0.0		1
+"TwrBsMyt"		"(kN-m)"		1.0		0.0		1
+"TwrBsMzt"		"(kN-m)"		1.0		0.0		1
+"GenTq"		"(kN-m)"		1.0		0.0		0
+"GenPwr"		"(kW)"		1.0		0.0		0
+-----  Calculated Channels  ----------------------------------------------------
+0                 NumCChan          The number calculated channels to generate.
+1234567890        Seed              The integer seed for the random number generator (-2,147,483,648 to 2,147,483,647)
+Col_Title   Units    Equation       Put each field in quotes.  Titles and units are limited to 10 characters.  NumCChan rows of data follow.
+-----  Extreme Events  ---------------------------------------------------------
+42                NumEETables       Number of tables of extreme events.  Must be > 0.
+0                 NumEECharts       Number of charts of extreme events.
+false             FindPeaks         Should we use the peak finder?
+1                 TimeChan          The time step channel (used for computing average extreme values, 0 for none) 
+2                 WSChan            The primary wind-speed channel (used for mean wind speed and turbulence intensity, 0 for none)
+0                 WSmin             Minimum wind speed value to consider when binning.  (Events associated with wind speeds less than WSmin will be ignored)
+70                WSmax             Maximum  wind speed value to consider when binning. (Events associated with wind speeds greater than WSmax will be ignored)
+2                 WSMaxBinSize      Maximum width of a wind-speed bin.
+false             ScatterPlots      Create scatter plots for each channel that appears in an Extreme Event table.  The x-axis is the wind speed (the windspeed bin value will be used for DLCs having BinMod > 0).
+1                 PlotFormat        Format for saving any of the requested ScatterPlots or Charts. [ 1 = PNG, 2 = MatLab figure ]
+false             WrEEvtsTxt        Write the extreme-event tables to a plain-text file?
+true              WrEEvtsXLS        Write the extreme-event tables to an Excel file?
+"xlsx"            XLStype           Type of Excel file ("xls"=>2003, "xlsx"=>2007).
+7                 ThemeColor        Excel color theme to use.  In Excel 2007, it is the column of the color chart (1-10).
+0.0               HeadTnS           Tint and shade of the header area (-1.0 to 1.0), with -1 being darkest and 1 lightest.
+0.5               DiagTnS           Tint and shade of the diagonal (-1.0 to 1.0), with -1 being darkest and 1 lightest.
+TableName           #Chans    ChanList                #InfoChans     InfoChanList    (NumEETables rows of data follow)
+"Root Blade1"      		6      $RootFxc1$ $RootFyc1$ $RootFzb1$ $RootMxc1$ $RootMyc1$ $RootMzb1$     	1    $Time$ 
+"Root Blade2"      		6      $RootFxc2$ $RootFyc2$ $RootFzb2$ $RootMxc2$ $RootMyc2$ $RootMzb2$     	1    $Time$ 
+"Root Blade3"      		6      $RootFxc3$ $RootFyc3$ $RootFzb3$ $RootMxc3$ $RootMyc3$ $RootMzb3$     	1    $Time$ 
+"Blade 1 Span1"      	6      $Spn1FLxb1$ $Spn1FLyb1$ $Spn1FLzb1$ $Spn1MLxb1$ $Spn1MLyb1$ $Spn1MLzb1$  1    $Time$ 
+"Blade 1 Span2"      	6      $Spn2FLxb1$ $Spn2FLyb1$ $Spn2FLzb1$ $Spn2MLxb1$ $Spn2MLyb1$ $Spn2MLzb1$  1    $Time$ 
+"Blade 1 Span3"      	6      $Spn3FLxb1$ $Spn3FLyb1$ $Spn3FLzb1$ $Spn3MLxb1$ $Spn3MLyb1$ $Spn3MLzb1$  1    $Time$ 
+"Blade 1 Span4"      	6      $Spn4FLxb1$ $Spn4FLyb1$ $Spn4FLzb1$ $Spn4MLxb1$ $Spn4MLyb1$ $Spn4MLzb1$  1    $Time$ 
+"Blade 1 Span5"      	6      $Spn5FLxb1$ $Spn5FLyb1$ $Spn5FLzb1$ $Spn5MLxb1$ $Spn5MLyb1$ $Spn5MLzb1$  1    $Time$ 
+"Blade 1 Span6"      	6      $Spn6FLxb1$ $Spn6FLyb1$ $Spn6FLzb1$ $Spn6MLxb1$ $Spn6MLyb1$ $Spn6MLzb1$	1    $Time$ 
+"Blade 1 Span7"      	6      $Spn7FLxb1$ $Spn7FLyb1$ $Spn7FLzb1$ $Spn7MLxb1$ $Spn7MLyb1$ $Spn7MLzb1$	1    $Time$ 
+"Blade 1 Span8"      	6      $Spn8FLxb1$ $Spn8FLyb1$ $Spn8FLzb1$ $Spn8MLxb1$ $Spn8MLyb1$ $Spn8MLzb1$  1    $Time$ 
+"Blade 1 Span9"      	6      $Spn9FLxb1$ $Spn9FLyb1$ $Spn9FLzb1$ $Spn9MLxb1$ $Spn9MLyb1$ $Spn9MLzb1$  1    $Time$ 
+"Blade 2 Span1"      	6      $Spn1FLxb2$ $Spn1FLyb2$ $Spn1FLzb2$ $Spn1MLxb2$ $Spn1MLyb2$ $Spn1MLzb2$  1    $Time$ 
+"Blade 2 Span2"      	6      $Spn2FLxb2$ $Spn2FLyb2$ $Spn2FLzb2$ $Spn2MLxb2$ $Spn2MLyb2$ $Spn2MLzb2$  1    $Time$ 
+"Blade 2 Span3"      	6      $Spn3FLxb2$ $Spn3FLyb2$ $Spn3FLzb2$ $Spn3MLxb2$ $Spn3MLyb2$ $Spn3MLzb2$  1    $Time$ 
+"Blade 2 Span4"      	6      $Spn4FLxb2$ $Spn4FLyb2$ $Spn4FLzb2$ $Spn4MLxb2$ $Spn4MLyb2$ $Spn4MLzb2$  1    $Time$ 
+"Blade 2 Span5"      	6      $Spn5FLxb2$ $Spn5FLyb2$ $Spn5FLzb2$ $Spn5MLxb2$ $Spn5MLyb2$ $Spn5MLzb2$  1    $Time$ 
+"Blade 2 Span6"      	6      $Spn6FLxb2$ $Spn6FLyb2$ $Spn6FLzb2$ $Spn6MLxb2$ $Spn6MLyb2$ $Spn6MLzb2$	1    $Time$ 
+"Blade 2 Span7"      	6      $Spn7FLxb2$ $Spn7FLyb2$ $Spn7FLzb2$ $Spn7MLxb2$ $Spn7MLyb2$ $Spn7MLzb2$	1    $Time$ 
+"Blade 2 Span8"      	6      $Spn8FLxb2$ $Spn8FLyb2$ $Spn8FLzb2$ $Spn8MLxb2$ $Spn8MLyb2$ $Spn8MLzb2$  1    $Time$ 
+"Blade 2 Span9"      	6      $Spn9FLxb2$ $Spn9FLyb2$ $Spn9FLzb2$ $Spn9MLxb2$ $Spn9MLyb2$ $Spn9MLzb2$  1    $Time$ 
+"Blade 3 Span1"      	6      $Spn1FLxb3$ $Spn1FLyb3$ $Spn1FLzb3$ $Spn1MLxb3$ $Spn1MLyb3$ $Spn1MLzb3$  1    $Time$ 
+"Blade 3 Span2"      	6      $Spn2FLxb3$ $Spn2FLyb3$ $Spn2FLzb3$ $Spn2MLxb3$ $Spn2MLyb3$ $Spn2MLzb3$  1    $Time$ 
+"Blade 3 Span3"      	6      $Spn3FLxb3$ $Spn3FLyb3$ $Spn3FLzb3$ $Spn3MLxb3$ $Spn3MLyb3$ $Spn3MLzb3$  1    $Time$ 
+"Blade 3 Span4"      	6      $Spn4FLxb3$ $Spn4FLyb3$ $Spn4FLzb3$ $Spn4MLxb3$ $Spn4MLyb3$ $Spn4MLzb3$  1    $Time$ 
+"Blade 3 Span5"      	6      $Spn5FLxb3$ $Spn5FLyb3$ $Spn5FLzb3$ $Spn5MLxb3$ $Spn5MLyb3$ $Spn5MLzb3$  1    $Time$ 
+"Blade 3 Span6"      	6      $Spn6FLxb3$ $Spn6FLyb3$ $Spn6FLzb3$ $Spn6MLxb3$ $Spn6MLyb3$ $Spn6MLzb3$	1    $Time$ 
+"Blade 3 Span7"      	6      $Spn7FLxb3$ $Spn7FLyb3$ $Spn7FLzb3$ $Spn7MLxb3$ $Spn7MLyb3$ $Spn7MLzb3$	1    $Time$ 
+"Blade 3 Span8"      	6      $Spn8FLxb3$ $Spn8FLyb3$ $Spn8FLzb3$ $Spn8MLxb3$ $Spn8MLyb3$ $Spn8MLzb3$  1    $Time$ 
+"Blade 3 Span9"      	6      $Spn9FLxb3$ $Spn9FLyb3$ $Spn9FLzb3$ $Spn9MLxb3$ $Spn9MLyb3$ $Spn9MLzb3$  1    $Time$ 
+"Defl Blade 1"			5	   $OoPDefl1$ $IPDefl1$ $TipDzb1$ $TTDspSS$ $TTDspFA$ 1    $Time$ 
+"Defl Blade 2"			5	   $OoPDefl2$ $IPDefl2$ $TipDzb2$ $TTDspSS$ $TTDspFA$ 1    $Time$ 
+"Defl Blade 3"			5	   $OoPDefl3$ $IPDefl3$ $TipDzb3$ $TTDspSS$ $TTDspFA$ 1    $Time$ 
+"LSS Gage Rot"   		6      $LSShftFxa$ $LSShftFya$ $LSShftFza$ $LSShftMxa$ $LSSGagMya$ $LSSGagMza$  1    $Time$
+"LSS Gage NonRot"  		6      $LSShftFxa$ $LSShftFys$ $LSShftFzs$ $LSShftMxa$ $LSSGagMys$ $LSSGagMzs$  1    $Time$ 
+"LSS Hub Rot"   		6      $LSShftFxa$ $LSShftFya$ $LSShftFza$ $LSShftMxa$ $LSSTipMya$ $LSSTipMza$  1    $Time$
+"LSS Hub NonRot"   		6      $LSShftFxa$ $LSShftFys$ $LSShftFzs$ $LSShftMxa$ $LSSTipMys$ $LSSTipMzs$  1    $Time$ 
+"Bottom Blade1"     	6      $RootFxb1$ $RootFyb1$ $RootFzb1$ $RootMxb1$ $RootMyb1$ $RootMzb1$     	1    $Time$ 
+"Bottom Blade2"     	6      $RootFxb2$ $RootFyb2$ $RootFzb2$ $RootMxb2$ $RootMyb2$ $RootMzb2$     	1    $Time$ 
+"Bottom Blade3"     	6      $RootFxb3$ $RootFyb3$ $RootFzb3$ $RootMxb3$ $RootMyb3$ $RootMzb3$     	1    $Time$ 
+"TT Yaw"   				6      $YawBrFxp$ $YawBrFyp$ $YawBrFzp$ $YawBrMxp$ $YawBrMyp$ $YawBrMzp$    	1    $Time$ 
+"TB Sup Str"			6      $TwrBsFxt$ $TwrBsFyt$ $TwrBsFzt$ $TwrBsMxt$ $TwrBsMyt$ $TwrBsMzt$    	1    $Time$ 
+ChartName         YLabel                                  Type       #Chans        ChanList
+-----  Input Files  ------------------------------------------------------------
+1		  FileFormat        Flag determining input file format.  1 = ascii, 2 = binary
+2         NumDLCs           The number of Design Load Cases
+315  1.35   1.35   1.0   1.0  0  " 1.35"         (NumDLCfiles, PSF1, PSF2, PSF3, PSF4, BinModel, DLC_Name)
+"OptimusLE_x64_1p3_V3_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V3_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V3_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V3_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V3_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V3_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V3_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V3_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V3_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V3_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V3_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V3_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V3_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V3_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V3_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V3_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V3_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V3_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V5_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V5_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V5_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V5_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V5_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V5_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V5_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V5_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V5_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V5_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V5_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V5_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V5_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V5_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V5_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V5_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V5_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V5_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V7_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V7_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V7_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V7_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V7_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V7_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V7_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V7_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V7_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V7_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V7_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V7_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V7_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V7_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V7_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V7_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V7_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V7_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V9_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V9_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V9_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V9_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V9_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V9_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V9_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V9_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V9_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V9_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V9_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V9_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V9_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V9_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V9_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V9_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V9_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V9_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V11_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V11_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V11_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V11_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V11_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V11_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V11_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V11_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V11_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V11_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V11_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V11_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V11_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V11_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V11_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V11_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V11_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V11_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V13_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V13_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V13_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V13_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V13_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V13_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V13_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V13_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V13_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V13_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V13_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V13_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V13_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V13_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V13_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V13_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V13_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V13_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V15_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V15_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V15_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V15_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V15_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V15_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V15_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V15_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V15_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V15_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V15_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V15_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V15_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V15_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V15_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V15_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V15_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V15_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V17_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V17_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V17_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V17_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V17_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V17_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V17_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V17_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V17_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V17_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V17_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V17_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V17_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V17_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V17_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V17_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V17_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V17_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V19_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V19_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V19_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V19_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V19_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V19_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V19_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V19_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V19_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V19_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V19_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V19_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V19_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V19_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V19_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V19_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V19_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V19_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V21_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V21_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V21_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V21_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V21_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V21_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V21_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V21_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V21_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V21_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V21_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V21_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V21_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V21_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V21_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V21_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V21_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V21_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V23_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V23_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V23_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V23_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V23_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V23_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V23_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V23_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V23_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V23_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V23_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V23_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V23_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V23_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V23_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V23_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V23_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V23_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V25_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V25_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V25_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V25_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V25_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V25_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V25_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V25_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V25_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V25_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V25_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V25_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V25_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V25_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V25_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_1p3_V25_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_1p3_V25_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_1p3_V25_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_1p4_V10.wnd.out"
+"OptimusLE_x64_1p4_V12.wnd.out"
+"OptimusLE_x64_1p4_V14.wnd.out"
+"OptimusLE_x64_1p5_V3_Hor.wnd.out"
+"OptimusLE_x64_1p5_V3_Vert.wnd.out"
+"OptimusLE_x64_1p5_V5_Hor.wnd.out"
+"OptimusLE_x64_1p5_V5_Vert.wnd.out"
+"OptimusLE_x64_1p5_V7_Hor.wnd.out"
+"OptimusLE_x64_1p5_V7_Vert.wnd.out"
+"OptimusLE_x64_1p5_V9_Hor.wnd.out"
+"OptimusLE_x64_1p5_V9_Vert.wnd.out"
+"OptimusLE_x64_1p5_V11_Hor.wnd.out"
+"OptimusLE_x64_1p5_V11_Vert.wnd.out"
+"OptimusLE_x64_1p5_V13_Hor.wnd.out"
+"OptimusLE_x64_1p5_V13_Vert.wnd.out"
+"OptimusLE_x64_1p5_V15_Hor.wnd.out"
+"OptimusLE_x64_1p5_V15_Vert.wnd.out"
+"OptimusLE_x64_1p5_V17_Hor.wnd.out"
+"OptimusLE_x64_1p5_V17_Vert.wnd.out"
+"OptimusLE_x64_1p5_V19_Hor.wnd.out"
+"OptimusLE_x64_1p5_V19_Vert.wnd.out"
+"OptimusLE_x64_1p5_V21_Hor.wnd.out"
+"OptimusLE_x64_1p5_V21_Vert.wnd.out"
+"OptimusLE_x64_1p5_V23_Hor.wnd.out"
+"OptimusLE_x64_1p5_V23_Vert.wnd.out"
+"OptimusLE_x64_1p5_V25_Hor.wnd.out"
+"OptimusLE_x64_1p5_V25_Vert.wnd.out"
+"OptimusLE_x64_6p3_V25_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S1_Y30_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S2_Y30_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S3_Y30_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S4_Y30_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S5_Y30_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S6_Y30_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S1_Y60_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S2_Y60_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S3_Y60_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S4_Y60_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S5_Y60_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S6_Y60_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S1_Y90_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S2_Y90_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S3_Y90_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S4_Y90_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S5_Y90_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S6_Y90_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S1_Y120_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S2_Y120_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S3_Y120_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S4_Y120_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S5_Y120_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S6_Y120_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S1_Y150_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S2_Y150_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S3_Y150_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S4_Y150_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S5_Y150_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S6_Y150_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S1_Y180_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S2_Y180_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S3_Y180_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S4_Y180_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S5_Y180_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S6_Y180_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S1_Y210_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S2_Y210_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S3_Y210_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S4_Y210_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S5_Y210_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S6_Y210_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S1_Y240_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S2_Y240_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S3_Y240_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S4_Y240_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S5_Y240_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S6_Y240_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S1_Y270_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S2_Y270_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S3_Y270_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S4_Y270_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S5_Y270_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S6_Y270_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S1_Y300_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S2_Y300_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S3_Y300_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S4_Y300_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S5_Y300_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S6_Y300_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S1_Y330_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S2_Y330_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S3_Y330_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S4_Y330_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S5_Y330_IIA.bts.out"
+"OptimusLE_x64_6p3_V25_S6_Y330_IIA.bts.out"
+72  1.1   1.35   1.0   1.0  0  "1.1"         (NumDLCfiles, PSF1, PSF2, PSF3, PSF4, BinModel, DLC_Name)
+"OptimusLE_x64_6p2_V25_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S1_Y30_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S2_Y30_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S3_Y30_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S4_Y30_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S5_Y30_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S6_Y30_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S1_Y60_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S2_Y60_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S3_Y60_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S4_Y60_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S5_Y60_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S6_Y60_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S1_Y90_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S2_Y90_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S3_Y90_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S4_Y90_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S5_Y90_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S6_Y90_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S1_Y120_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S2_Y120_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S3_Y120_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S4_Y120_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S5_Y120_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S6_Y120_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S1_Y150_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S2_Y150_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S3_Y150_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S4_Y150_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S5_Y150_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S6_Y150_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S1_Y180_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S2_Y180_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S3_Y180_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S4_Y180_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S5_Y180_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S6_Y180_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S1_Y210_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S2_Y210_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S3_Y210_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S4_Y210_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S5_Y210_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S6_Y210_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S1_Y240_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S2_Y240_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S3_Y240_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S4_Y240_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S5_Y240_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S6_Y240_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S1_Y270_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S2_Y270_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S3_Y270_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S4_Y270_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S5_Y270_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S6_Y270_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S1_Y300_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S2_Y300_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S3_Y300_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S4_Y300_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S5_Y300_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S6_Y300_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S1_Y330_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S2_Y330_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S3_Y330_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S4_Y330_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S5_Y330_IIA.bts.out"
+"OptimusLE_x64_6p2_V25_S6_Y330_IIA.bts.out"
+==EOF==                             DO NOT REMOVE OR CHANGE.  MUST COME JUST AFTER LAST LINE OF VALID INPUT.
+
+"OptimusLE_x64_2p1_V9_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V9_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V9_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V9_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V9_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V9_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V9_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V9_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V9_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V9_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V9_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V9_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V9_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V9_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V9_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V9_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V9_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V9_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V11_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V11_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V11_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V11_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V11_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V11_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V11_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V11_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V11_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V11_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V11_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V11_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V11_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V11_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V11_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V11_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V11_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V11_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V13_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V13_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V13_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V13_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V13_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V13_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V13_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V13_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V13_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V13_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V13_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V13_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V13_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V13_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V13_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V13_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V13_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V13_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V15_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V15_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V15_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V15_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V15_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V15_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V15_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V15_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V15_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V15_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V15_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V15_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V15_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V15_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V15_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_2p1_V15_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p1_V15_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_2p1_V15_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V9_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V9_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V9_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V9_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V9_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V9_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V9_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V9_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V9_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V9_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V9_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V9_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V9_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V9_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V9_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V9_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V9_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V9_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V11_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V11_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V11_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V11_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V11_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V11_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V11_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V11_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V11_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V11_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V11_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V11_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V11_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V11_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V11_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V11_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V11_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V11_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V13_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V13_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V13_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V13_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V13_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V13_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V13_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V13_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V13_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V13_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V13_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V13_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V13_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V13_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V13_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V13_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V13_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V13_S6_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V15_S1_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V15_S1_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V15_S1_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V15_S2_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V15_S2_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V15_S2_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V15_S3_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V15_S3_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V15_S3_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V15_S4_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V15_S4_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V15_S4_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V15_S5_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V15_S5_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V15_S5_Y8_IIA.bts.out"
+"OptimusLE_x64_2p2_V15_S6_Y-8_IIA.bts.out"
+"OptimusLE_x64_2p2_V15_S6_Y0_IIA.bts.out"
+"OptimusLE_x64_2p2_V15_S6_Y8_IIA.bts.out"
