@@ -1,0 +1,8 @@
+
+Predictions were generated on 29-Oct-2026 at 21:37:22 using OpenFAST, compiled on Jun 13 2025 at 13:19:07 as a 64-bit application using single precision at commit v4.0.5
+ linked with  NWTC Subroutine Library; ElastoDyn; InflowWind; AeroDyn
+
+Description from the FAST input file: Generated with AeroElasticSE FAST driver
+
+Time	Wind1VelX	Wind1VelY	Wind1VelZ	BldPitch1	BldPitch2	BldPitch3	Azimuth	RotSpeed	RotTorq	RotPwr	HSSBrTq	TipClrnc1	TipClrnc2	TipClrnc3	TTDspFA	TTDspSS	RootFxb1	RootFyb1	RootFzb1	RootMxb1	RootMyb1	RootMzb1	RootFxc1	RootFyc1	RootMxc1	RootMyc1	LSShftFxa	LSShftFya	LSShftFza	LSShftMxa	LSSTipMya	LSSTipMza	LSShftFys	LSShftFzs	LSSTipMys	LSSTipMzs	YawBrFxp	YawBrFyp	YawBrFzp	YawBrMxp	YawBrMyp	YawBrMzp	TwrBsFxt	TwrBsFyt	TwrBsFzt	TwrBsMxt	TwrBsMyt	TwrBsMzt	RtFldCp	RtFldCq	RtFldCt	RtFldPwr	RtSpeed	RtTSR
+(s)	(m/s)	(m/s)	(m/s)	(deg)	(deg)	(deg)	(deg)	(rpm)	(kN-m)	(kW)	(kN-m)	(m)	(m)	(m)	(m)	(m)	(kN)	(kN)	(kN)	(kN-m)	(kN-m)	(kN-m)	(kN)	(kN)	(kN-m)	(kN-m)	(kN)	(kN)	(kN)	(kN-m)	(kN-m)	(kN-m)	(kN)	(kN)	(kN-m)	(kN-m)	(kN)	(kN)	(kN)	(kN-m)	(kN-m)	(kN-m)	(kN)	(kN)	(kN)	(kN-m)	(kN-m)	(kN-m)	(-)	(-)	(-)	(W)	(rpm)	(-)

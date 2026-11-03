@@ -1,0 +1,13 @@
+QBlade CE v2.0.9.7b_beta unix
+
+ Calculated polar for: circular_Optimus_Renova
+
+ 1 1 Reynolds number fixed          Mach number fixed         
+
+ xtrf =   1.000 (top)        1.000 (bottom)
+ Mach =   0.000     Re =     2.000 e 6     Ncrit =   9.000
+
+alpha    CL       CD       CDp      Cm       TopXtr   BotXtr   Cpmin    Chinge   XCp      
+------   ------   ------   ------   ------   ------   ------   ------   ------   ------   
+
+

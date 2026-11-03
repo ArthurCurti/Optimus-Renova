@@ -1,0 +1,19 @@
+----------------------------------------QBlade Multi RE Polar File--------------------------------------------------
+Generated with : QBlade CE v2.0.9.7b_beta unix
+Archive Format: 310043
+Time : 19:19:38
+Date : 29.10.2026
+
+----------------------------------------Object Names----------------------------------------------------------------
+circular_Polar                                                         POLARNAME          - the polar name
+circular_Optimus_Renova                                                FOILNAME           - the airfoil name to which the polar(s) belong OR path to airfoil file
+
+----------------------------------------Parameters------------------------------------------------------------------
+100.0                                              THICKNESS          - the thickness of the airfoil in % of chord
+false                                              ISDECOMPOSED       - is the polar decomposed (imports Cl_Sep, Cl_att and f_st columns) [bool]
+REYNOLDS            3.0000E+06          - the list of Reynolds numbers for the imported polars
+
+----------------------------------------Polar Data------------------------------------------------------------------
+AOA                 CL                  CD                  CM                  
+-180.000000         0.000100            0.350000            0.004670            
+180.000000          0.000100            0.350000            0.004670            
