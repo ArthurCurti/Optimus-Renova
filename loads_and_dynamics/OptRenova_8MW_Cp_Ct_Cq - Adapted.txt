@@ -1,5 +1,5 @@
 # ----- Rotor performance tables for the WEIS Turbine wind turbine ----- 
-# ------------ Written on Nov-05-26 using the amazing power of will of Arthur ------------ 
+# ------------ Written on Nov-05-26 using the amazing power of will of Arthur and Moazzam ------------ 
 
 # Pitch angle vector, 20 entries - x axis (matrix columns) (deg)
 -5.0   -3.16   -1.32   0.52   2.36   4.2   6.04   7.88   9.72   11.56   13.4   15.24   17.08   18.92   20.76   22.6   24.44   26.28   28.12   29.96   
