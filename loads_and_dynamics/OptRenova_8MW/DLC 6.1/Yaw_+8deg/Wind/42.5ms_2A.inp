@@ -1,7 +1,7 @@
 TurbSim Input File. Valid for TurbSim v1.06.00, 21-Sep-2012 
 HS Flensburg WS2025 - Optimus Syria 5.0 MW Wind Turbine (Onshore) 
 ---------Runtime Options-----------------------------------
-16000               RandSeed1       - First random seed  (-2147483648 to 2147483647)
+15000               RandSeed1       - First random seed  (-2147483648 to 2147483647)
 RanLux              RandSeed2       - Second random seed (-2147483648 to 2147483647) for intrinsic pRNG, or an alternative pRNG: "RanLux" or "RNSNLW"
 False               WrBHHTP         - Output hub-height turbulence parameters in binary form?  (Generates RootName.bin)
 False               WrFHHTP         - Output hub-height turbulence parameters in formatted form?  (Generates RootName.dat)
