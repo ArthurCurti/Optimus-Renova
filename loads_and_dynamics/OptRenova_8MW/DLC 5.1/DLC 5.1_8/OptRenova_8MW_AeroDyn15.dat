@@ -58,7 +58,7 @@ True                   FLookup     - Flag to indicate whether a lookup for f' wi
 3                      InCol_Cd    - The column in the airfoil tables that contains the drag coefficient (-)
 4                      InCol_Cm    - The column in the airfoil tables that contains the pitching-moment coefficient; use zero if there is no Cm column (-)
 0                      InCol_Cpmin - The column in the airfoil tables that contains the Cpmin coefficient; use zero if there is no Cpmin column (-)
-30                      NumAFfiles  - Number of airfoil files used (-)
+16                      NumAFfiles  - Number of airfoil files used (-)
 "Airfoils/circular_Optimus_Renova_circular_Polar.dat"    AFNames            - Airfoil file names (NumAFfiles lines) (quoted strings)
 "Airfoils/circular_Optimus_Renova_circular_Polar.dat"
 "Airfoils/circular_FB90_blend_t93.0_Optimus_Renova_circular_FB90_blend_t93.0_Imported_Polar_360_V.dat"
