@@ -1,5 +1,5 @@
 ------- AERODYN v15.00.* BLADE DEFINITION INPUT FILE -------------------------------------
-Generated with AeroElasticSE FAST driver
+OPTIMUS Renova 8MW HS-Flenburg WS 2026/2027
 ======  Blade Properties =================================================================
 16          NumBlNds    - Number of blade nodes used in the analysis (-)
     BlSpn        BlCrvAC        BlSwpAC        BlCrvAng       BlTwist        BlChord          BlAFID

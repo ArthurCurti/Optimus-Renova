@@ -1,5 +1,5 @@
 ------- AERODYN v15.03.* INPUT FILE ------------------------------------------------
-Generated with AeroElasticSE FAST driver
+OPTIMUS Renova 8MW HS-Flenburg WS 2026/2027
 ======  General Options  ============================================================================
 False                  Echo        - Echo the input to "<rootname>.AD.ech"?  (flag)
 Default                DTAero      - Time interval for aerodynamic calculations {or "default"} (s)

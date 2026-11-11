@@ -42,8 +42,8 @@ False                  PtfmYDOF      - Platform yaw rotation DOF (flag)
 0.0                    PtfmYaw       - Initial or fixed yaw rotational displacement of platform (degrees)
 ---------------------- TURBINE CONFIGURATION   ---------------------------------
 3                      NumBl         - Number of blades (-)
-85                     TipRad        - The distance from the rotor apex to the blade tip (meters)
-2.53                   HubRad        - The distance from the rotor apex to the blade root (meters)
+85.4                   TipRad        - The distance from the rotor apex to the blade tip (meters)
+3.4                    HubRad        - The distance from the rotor apex to the blade root (meters)
 -4.0                   PreCone(1)    - Blade 1 cone angle (degrees)
 -4.0                   PreCone(2)    - Blade 2 cone angle (degrees)
 -4.0                   PreCone(3)    - Blade 3 cone angle (degrees) [unused for 2 blades]
@@ -51,11 +51,11 @@ False                  PtfmYDOF      - Platform yaw rotation DOF (flag)
 0.0                    UndSling      - Undersling length [distance from teeter pin to the rotor apex] (meters) [unused for 3 blades]
 0.0                    Delta3        - Delta-3 angle for teetering rotors (degrees) [unused for 3 blades]
 0.0                    AzimB1Up      - Azimuth value to use for I/O when blade 1 points up (degrees)
--10.09429761853814     OverHang      - Distance from yaw axis to rotor apex [3 blades] or teeter pin [2 blades] (meters)
+-5.0                   OverHang      - Distance from yaw axis to rotor apex [3 blades] or teeter pin [2 blades] (meters)
 0.0                    ShftGagL      - Distance from rotor apex [3 blades] or teeter pin [2 blades] to shaft strain gages [positive for upwind rotors] (meters)
 -6.0                   ShftTilt      - Rotor shaft tilt angle (degrees)
--5.898043253994206     NacCMxn       - Downwind distance from the tower-top to the nacelle CM (meters)
--0.0831024171092378    NacCMyn       - Lateral  distance from the tower-top to the nacelle CM (meters)
+-1.0                   NacCMxn       - Downwind distance from the tower-top to the nacelle CM (meters)
+0                      NacCMyn       - Lateral  distance from the tower-top to the nacelle CM (meters)
 2.5303340826388276     NacCMzn       - Vertical distance from the tower-top to the nacelle CM (meters)
 0.0                    NcIMUxn       - Downwind distance from the tower-top to the nacelle IMU (meters)
 0.0                    NcIMUyn       - Lateral  distance from the tower-top to the nacelle IMU (meters)
@@ -85,7 +85,7 @@ False                  PtfmYDOF      - Platform yaw rotation DOF (flag)
 0.0                    PtfmYZIner    - Platform yz moment of inertia about the platform CM (=-int(yzdm)) (kg m^2)
 0.0                    PtfmXZIner    - Platform xz moment of inertia about the platform CM (=-int(xzdm)) (kg m^2)
 ---------------------- BLADE   -------------------------------------------------
-30                     BldNodes      - Number of blade nodes (per blade) used for analysis (-)
+16                     BldNodes      - Number of blade nodes (per blade) used for analysis (-)
 "StrucData\OptRenova_8MW_ElastoDyn_blade.dat" BldFile1      - Name of file containing properties for blade 1 (quoted string)
 "StrucData\OptRenova_8MW_ElastoDyn_blade.dat" BldFile2      - Name of file containing properties for blade 2 (quoted string)
 "StrucData\OptRenova_8MW_ElastoDyn_blade.dat" BldFile3      - Name of file containing properties for blade 3 (quoted string) [unused for 2 blades]
@@ -100,7 +100,7 @@ False                  PtfmYDOF      - Platform yaw rotation DOF (flag)
 99999.9                TeetHSSp      - Rotor-teeter hard-stop linear-spring constant (N-m/rad) [used only for 2 blades and when TeetMod=1]
 ---------------------- YAW-FRICTION   ------------------------------------------
 0                      YawFrctMod    - Yaw-friction model {0: none, 1: friction independent of yaw-bearing force and bending moment, 2: friction with Coulomb terms depending on yaw-bearing force and bending moment, 3: user defined model} (switch)
-99999.9 	           M_CSmax       - Maximum static Coulomb friction torque (N-m) [M_CSmax when YawFrctMod=1; |Fz|*M_CSmax when YawFrctMod=2 and Fz<0]
+99999.9 	       M_CSmax       - Maximum static Coulomb friction torque (N-m) [M_CSmax when YawFrctMod=1; |Fz|*M_CSmax when YawFrctMod=2 and Fz<0]
 99999.9                M_FCSmax      - Maximum static Coulomb friction torque proportional to yaw bearing shear force (N-m) [sqrt(Fx^2+Fy^2)*M_FCSmax; only used when YawFrctMod=2]
 99999.9                M_MCSmax      - Maximum static Coulomb friction torque proportional to yaw bearing bending moment (N-m) [sqrt(Mx^2+My^2)*M_MCSmax; only used when YawFrctMod=2]
 99999.9                M_CD          - Dynamic Coulomb friction moment (N-m) [M_CD when YawFrctMod=1; |Fz|*M_CD when YawFrctMod=2 and Fz<0]
@@ -111,7 +111,7 @@ False                  PtfmYDOF      - Platform yaw rotation DOF (flag)
 99999.9                OmgCut        - Yaw angular velocity cutoff below which viscous friction is linearized (rad/s)
 ---------------------- DRIVETRAIN   --------------------------------------------
 96.1                   GBoxEff       - Gearbox efficiency (%)
-192.7                   GBRatio       - Gearbox ratio (-)
+192.7                  GBRatio       - Gearbox ratio (-)
 2317025000.0           DTTorSpr      - Drivetrain torsional spring (N-m/rad)
 9240560.0              DTTorDmp      - Drivetrain torsional damper (N-m/(rad/s))
 ---------------------- FURLING   -----------------------------------------------
