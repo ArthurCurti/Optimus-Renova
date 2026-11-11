@@ -49,7 +49,7 @@ Default                  UACutout    ! Angle of attack above which unsteady aero
 Default                  filtCutOff  ! Cut-off frequency (-3 dB corner frequency) for low-pass filtering the AoA input to UA, as well as the 1st and 2nd derivatives (Hz) [default = 20]
 !........................................
 ! Table of aerodynamics coefficients
-200                      NumAlf      ! Number of data lines in the following table
+394                      NumAlf      ! Number of data lines in the following table
 !    Alpha      Cl      Cd        Cm
 !    (deg)      (-)     (-)       (-)
 -1.80E+02	0.00E+00	6.00E-03	0.00E+00
@@ -446,10 +446,6 @@ Default                  filtCutOff  ! Cut-off frequency (-3 dB corner frequency
 1.77E+02	-9.41E-02	1.09E-02	-3.44E-02
 1.78E+02	-6.28E-02	8.19E-03	-2.30E-02
 1.79E+02	-3.14E-02	6.55E-03	-1.16E-02
-1.80E+02	0.00E+00	6.00E-03	0.00E+00
-1.80E+02	0.00E+00	6.00E-03	0.00E+00
-1.79E+02	-3.14E-02	6.55E-03	-1.16E-02
-1.80E+02	0.00E+00	6.00E-03	0.00E+00
 1.80E+02	0.00E+00	6.00E-03	0.00E+00
 
 	

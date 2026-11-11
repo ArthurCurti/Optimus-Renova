@@ -110,7 +110,7 @@ TwrElev        TwrDiam        TwrCd          TwrTI          TwrCb !TwrTI used on
 ======  Outputs  ====================================================================================
 False                  SumPrint    - Generate a summary file listing input options and interpolated properties to "<rootname>.AD.sum"?  (flag)
 9                      NBlOuts     - Number of blade node outputs [0 - 9] (-)
-4, 7, 10, 13, 15, 18, 21, 24, 27 BlOutNd     - Blade nodes whose values will be output  (-)
+1, 2, 4, 6, 8, 10, 12, 14, 16 BlOutNd     - Blade nodes whose values will be output  (-)
 0                      NTwOuts     - Number of tower node outputs [0 - 9]  (-)
 0                      TwOutNd     - Tower nodes whose values will be output  (-)
                    OutList             - The next line(s) contains a list of output parameters.  See OutListParameters.xlsx for a listing of available output channels, (-)
