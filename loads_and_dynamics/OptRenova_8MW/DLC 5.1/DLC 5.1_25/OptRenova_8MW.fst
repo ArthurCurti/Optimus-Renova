@@ -3,7 +3,7 @@ OPTIMUS Renova 8MW HS-Flenburg WS 2026/2027
 ---------------------- SIMULATION CONTROL --------------------------------------
 False                  Echo        - Echo input data to <RootName>.ech (flag)
 "FATAL"                AbortLevel  - Error level when simulation should abort (string) {"WARNING", "SEVERE", "FATAL"}
-600.0                  TMax        - Total run time (s)
+200                    TMax        - Total run time (s)
 0.05                   DT          - Recommended module time step (s)
 2                      InterpOrder - Interpolation order for input/output time history (-) {1=linear, 2=quadratic}
 1                      NumCrctn    - Number of correction iterations (-) {0=explicit calculation, i.e., no corrections}

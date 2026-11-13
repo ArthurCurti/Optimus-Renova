@@ -1,0 +1,416 @@
+! ------------ AirfoilInfo v1.01.x Input File ----------------------------------
+! AeroElasticSE FAST driver
+! line
+! line
+! ------------------------------------------------------------------------------
+DEFAULT                  InterpOrd   ! Interpolation order to use for quasi-steady table lookup {1=linear; 3=cubic spline; "default"} [default=3]
+1                        NonDimArea  ! The non-dimensional area of the airfoil (area/chord^2) (set to 1.0 if unsure or unneeded)
+0                        NumCoords   ! The number of coordinates in the airfoil shape file. Set to zero if coordinates not included.
+Default                  BL_file     ! The file name including the boundary layer characteristics of the profile. Ignored if the aeroacoustic module is not called.
+1                        NumTabs     ! Number of airfoil tables in this file.  Each table must have lines for Re and Ctrl.
+! ------------------------------------------------------------------------------
+! data for table 1 
+! ------------------------------------------------------------------------------
+10.000000                Re          ! Reynolds number in millions
+0                        Ctrl        ! Control setting (must be 0 for current AirfoilInfo)
+True                     InclUAdata  ! Is unsteady aerodynamics data included in this table? If TRUE, then include 30 UA coefficients below this line
+!........................................
+-26.536797               alpha0      ! 0-lift angle of attack, depends on airfoil.
+15.50                    alpha1      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA>alpha0. (deg)
+-15.50                   alpha2      ! Angle of attack at f=0.7, (approximately the stall angle) for AOA<alpha0. (deg)
+1.000000                 eta_e       ! Recovery factor in the range [0.85 - 0.95] used only for UAMOD=1, it is set to 1 in the code when flookup=True. (-)
+7.38494                 C_nalpha    ! Slope of the 2D normal force coefficient curve. (1/rad)
+Default                  T_f0        ! Initial value of the time constant associated with Df in the expression of Df and f. [default = 3]
+Default                  T_V0        ! Initial value of the time constant associated with the vortex lift decay process; it is used in the expression of Cvn. It depends on Re,M, and airfoil class. [default = 6]
+Default                  T_p         ! Boundary-layer,leading edge pressure gradient time constant in the expression of Dp. It should be tuned based on airfoil experimental data. [default = 1.7]
+Default                  T_VL        ! Initial value of the time constant associated with the vortex advection process; it represents the non-dimensional time in semi-chords, needed for a vortex to travel from LE to trailing edge (TE); it is used in the expression of Cvn. It depends on Re, M (weakly), and airfoil. [valid range = 6 - 13, default = 11]
+Default                  b1          ! Constant in the expression of phi_alpha^c and phi_q^c.  This value is relatively insensitive for thin airfoils, but may be different for turbine airfoils. [from experimental results, defaults to 0.14]
+Default                  b2          ! Constant in the expression of phi_alpha^c and phi_q^c.  This value is relatively insensitive for thin airfoils, but may be different for turbine airfoils. [from experimental results, defaults to 0.53]
+Default                  b5          ! Constant in the expression of K'''_q,Cm_q^nc, and k_m,q.  [from  experimental results, defaults to 5]
+Default                  A1          ! Constant in the expression of phi_alpha^c and phi_q^c.  This value is relatively insensitive for thin airfoils, but may be different for turbine airfoils. [from experimental results, defaults to 0.3]
+Default                  A2          ! Constant in the expression of phi_alpha^c and phi_q^c.  This value is relatively insensitive for thin airfoils, but may be different for turbine airfoils. [from experimental results, defaults to 0.7]
+Default                  A5          ! Constant in the expression of K'''_q,Cm_q^nc, and k_m,q. [from experimental results, defaults to 1]
+0.000000                 S1          ! Constant in the f curve best-fit for alpha0<=AOA<=alpha1; by definition it depends on the airfoil. [ignored if UAMod<>1]
+0.000000                 S2          ! Constant in the f curve best-fit for         AOA> alpha1; by definition it depends on the airfoil. [ignored if UAMod<>1]
+0.000000                 S3          ! Constant in the f curve best-fit for alpha2<=AOA< alpha0; by definition it depends on the airfoil. [ignored if UAMod<>1]
+0.000000                 S4          ! Constant in the f curve best-fit for         AOA< alpha2; by definition it depends on the airfoil. [ignored if UAMod<>1]
+1.6514                   Cn1         ! Critical value of C0n at leading edge separation. It should be extracted from airfoil data at a given Mach and Reynolds number. It can be calculated from the static value of Cn at either the break in the pitching moment or the loss of chord force at the onset of stall. It is close to the condition of maximum lift of the airfoil at low Mach numbers.
+-0.7784                  Cn2         ! As Cn1 for negative AOAs.
+Default                  St_sh       ! Strouhal's shedding frequency constant.  [default = 0.19]
+0.0958                   Cd0         ! 2D drag coefficient value at 0-lift.
+0.000000                 Cm0         ! 2D pitching moment coefficient about 1/4-chord location, at 0-lift, positive if nose up. [If the aerodynamics coefficients table does not include a column for Cm, this needs to be set to 0.0]
+0.000000                 k0          ! Constant in the \hat(x)_cp curve best-fit; = (\hat(x)_AC-0.25).  [ignored if UAMod<>1]
+0.000000                 k1          ! Constant in the \hat(x)_cp curve best-fit.  [ignored if UAMod<>1]
+0.000000                 k2          ! Constant in the \hat(x)_cp curve best-fit.  [ignored if UAMod<>1]
+0.000000                 k3          ! Constant in the \hat(x)_cp curve best-fit.  [ignored if UAMod<>1]
+0.000000                 k1_hat      ! Constant in the expression of Cc due to leading edge vortex effects.  [ignored if UAMod<>1]
+Default                  x_cp_bar    ! Constant in the expression of \hat(x)_cp^v. [ignored if UAMod<>1, default = 0.2]
+Default                  UACutout    ! Angle of attack above which unsteady aerodynamics are disabled (deg). [Specifying the string "Default" sets UACutout to 45 degrees]
+Default                  filtCutOff  ! Cut-off frequency (-3 dB corner frequency) for low-pass filtering the AoA input to UA, as well as the 1st and 2nd derivatives (Hz) [default = 20]
+!........................................
+! Table of aerodynamics coefficients
+361                      NumAlf      ! Number of data lines in the following table
+!    Alpha      Cl      Cd        Cm
+!    (deg)      (-)     (-)       (-)
+-1.80E+02	0.00E+00	6.00E-03	0.00E+00
+-1.79E+02	3.15E-02	6.55E-03	1.28E-02
+-1.78E+02	6.30E-02	8.19E-03	2.54E-02
+-1.77E+02	9.44E-02	1.09E-02	3.80E-02
+-1.76E+02	1.26E-01	1.48E-02	5.05E-02
+-1.75E+02	1.57E-01	1.97E-02	6.28E-02
+-1.74E+02	1.88E-01	2.57E-02	7.50E-02
+-1.73E+02	2.18E-01	3.27E-02	8.71E-02
+-1.72E+02	2.49E-01	4.09E-02	9.90E-02
+-1.71E+02	2.79E-01	5.00E-02	1.11E-01
+-1.70E+02	3.09E-01	6.03E-02	1.23E-01
+-1.69E+02	3.38E-01	7.15E-02	1.34E-01
+-1.68E+02	3.67E-01	8.38E-02	1.46E-01
+-1.67E+02	3.96E-01	9.71E-02	1.57E-01
+-1.66E+02	4.24E-01	1.11E-01	1.68E-01
+-1.65E+02	4.51E-01	1.27E-01	1.79E-01
+-1.64E+02	4.78E-01	1.43E-01	1.90E-01
+-1.63E+02	5.05E-01	1.60E-01	2.00E-01
+-1.62E+02	5.31E-01	1.78E-01	2.11E-01
+-1.61E+02	5.56E-01	1.97E-01	2.21E-01
+-1.60E+02	5.80E-01	2.17E-01	2.31E-01
+-1.59E+02	6.04E-01	2.37E-01	2.41E-01
+-1.58E+02	6.27E-01	2.59E-01	2.51E-01
+-1.57E+02	6.49E-01	2.81E-01	2.61E-01
+-1.56E+02	6.71E-01	3.04E-01	2.70E-01
+-1.55E+02	6.92E-01	3.27E-01	2.80E-01
+-1.54E+02	7.11E-01	3.52E-01	2.89E-01
+-1.53E+02	7.30E-01	3.77E-01	2.98E-01
+-1.52E+02	7.48E-01	4.03E-01	3.07E-01
+-1.51E+02	7.66E-01	4.29E-01	3.15E-01
+-1.50E+02	7.82E-01	4.56E-01	3.24E-01
+-1.49E+02	7.97E-01	4.83E-01	3.32E-01
+-1.48E+02	8.11E-01	5.11E-01	3.40E-01
+-1.47E+02	8.25E-01	5.40E-01	3.48E-01
+-1.46E+02	8.37E-01	5.69E-01	3.56E-01
+-1.45E+02	8.48E-01	5.98E-01	3.63E-01
+-1.44E+02	8.59E-01	6.28E-01	3.70E-01
+-1.43E+02	8.68E-01	6.58E-01	3.77E-01
+-1.42E+02	8.76E-01	6.88E-01	3.84E-01
+-1.41E+02	8.83E-01	7.19E-01	3.91E-01
+-1.40E+02	8.89E-01	7.50E-01	3.97E-01
+-1.39E+02	8.94E-01	7.81E-01	4.04E-01
+-1.38E+02	8.98E-01	8.12E-01	4.10E-01
+-1.37E+02	9.01E-01	8.43E-01	4.16E-01
+-1.36E+02	9.02E-01	8.75E-01	4.21E-01
+-1.35E+02	9.03E-01	9.06E-01	4.27E-01
+-1.34E+02	9.02E-01	9.37E-01	4.32E-01
+-1.33E+02	9.01E-01	9.69E-01	4.37E-01
+-1.32E+02	8.98E-01	1.00E+00	4.42E-01
+-1.31E+02	8.94E-01	1.03E+00	4.47E-01
+-1.30E+02	8.89E-01	1.06E+00	4.51E-01
+-1.29E+02	8.83E-01	1.09E+00	4.55E-01
+-1.28E+02	8.76E-01	1.12E+00	4.59E-01
+-1.27E+02	8.68E-01	1.15E+00	4.63E-01
+-1.26E+02	8.59E-01	1.18E+00	4.67E-01
+-1.25E+02	8.48E-01	1.21E+00	4.70E-01
+-1.24E+02	8.37E-01	1.24E+00	4.74E-01
+-1.23E+02	8.25E-01	1.27E+00	4.77E-01
+-1.22E+02	8.11E-01	1.30E+00	4.80E-01
+-1.21E+02	7.97E-01	1.33E+00	4.82E-01
+-1.20E+02	7.82E-01	1.36E+00	4.85E-01
+-1.19E+02	7.66E-01	1.38E+00	4.87E-01
+-1.18E+02	7.48E-01	1.41E+00	4.89E-01
+-1.17E+02	7.30E-01	1.44E+00	4.91E-01
+-1.16E+02	7.11E-01	1.46E+00	4.93E-01
+-1.15E+02	6.92E-01	1.48E+00	4.94E-01
+-1.14E+02	6.71E-01	1.51E+00	4.95E-01
+-1.13E+02	6.49E-01	1.53E+00	4.96E-01
+-1.12E+02	6.27E-01	1.55E+00	4.97E-01
+-1.11E+02	6.04E-01	1.57E+00	4.98E-01
+-1.10E+02	5.80E-01	1.60E+00	4.99E-01
+-1.09E+02	5.56E-01	1.62E+00	4.99E-01
+-1.08E+02	5.31E-01	1.63E+00	4.99E-01
+-1.07E+02	5.05E-01	1.65E+00	4.99E-01
+-1.06E+02	4.78E-01	1.67E+00	4.99E-01
+-1.05E+02	4.51E-01	1.69E+00	4.99E-01
+-1.04E+02	4.24E-01	1.70E+00	4.98E-01
+-1.03E+02	3.96E-01	1.71E+00	4.97E-01
+-1.02E+02	3.67E-01	1.73E+00	4.96E-01
+-1.01E+02	3.38E-01	1.74E+00	4.95E-01
+-1.00E+02	3.09E-01	1.75E+00	4.94E-01
+-9.90E+01	2.79E-01	1.76E+00	4.93E-01
+-9.80E+01	2.49E-01	1.77E+00	4.91E-01
+-9.70E+01	2.18E-01	1.78E+00	4.89E-01
+-9.60E+01	1.88E-01	1.79E+00	4.87E-01
+-9.50E+01	1.57E-01	1.79E+00	4.85E-01
+-9.40E+01	1.26E-01	1.80E+00	4.83E-01
+-9.30E+01	9.44E-02	1.80E+00	4.81E-01
+-9.20E+01	6.30E-02	1.80E+00	4.78E-01
+-9.10E+01	3.15E-02	1.81E+00	4.75E-01
+-9.00E+01	0.00E+00	1.80E+00	4.71E-01
+-8.90E+01	-3.14E-02	1.80E+00	4.69E-01
+-8.80E+01	-6.29E-02	1.80E+00	4.66E-01
+-8.70E+01	-9.43E-02	1.80E+00	4.64E-01
+-8.60E+01	-1.26E-01	1.80E+00	4.61E-01
+-8.50E+01	-1.57E-01	1.80E+00	4.58E-01
+-8.40E+01	-1.88E-01	1.79E+00	4.55E-01
+-8.30E+01	-2.19E-01	1.79E+00	4.51E-01
+-8.20E+01	-2.50E-01	1.78E+00	4.48E-01
+-8.10E+01	-2.80E-01	1.78E+00	4.45E-01
+-8.00E+01	-3.10E-01	1.77E+00	4.41E-01
+-7.90E+01	-3.40E-01	1.76E+00	4.37E-01
+-7.80E+01	-3.69E-01	1.75E+00	4.33E-01
+-7.70E+01	-3.98E-01	1.74E+00	4.30E-01
+-7.60E+01	-4.27E-01	1.73E+00	4.25E-01
+-7.50E+01	-4.55E-01	1.71E+00	4.21E-01
+-7.40E+01	-4.83E-01	1.70E+00	4.17E-01
+-7.30E+01	-5.10E-01	1.68E+00	4.13E-01
+-7.20E+01	-5.36E-01	1.67E+00	4.08E-01
+-7.10E+01	-5.62E-01	1.65E+00	4.03E-01
+-7.00E+01	-5.88E-01	1.63E+00	3.99E-01
+-6.90E+01	-6.12E-01	1.61E+00	3.94E-01
+-6.80E+01	-6.36E-01	1.60E+00	3.89E-01
+-6.70E+01	-6.60E-01	1.58E+00	3.84E-01
+-6.60E+01	-6.82E-01	1.55E+00	3.79E-01
+-6.50E+01	-7.04E-01	1.53E+00	3.74E-01
+-6.40E+01	-7.25E-01	1.51E+00	3.69E-01
+-6.30E+01	-7.45E-01	1.49E+00	3.64E-01
+-6.20E+01	-7.64E-01	1.46E+00	3.58E-01
+-6.10E+01	-7.83E-01	1.44E+00	3.53E-01
+-6.00E+01	-8.01E-01	1.41E+00	3.47E-01
+-5.90E+01	-8.17E-01	1.39E+00	3.42E-01
+-5.80E+01	-8.33E-01	1.36E+00	3.36E-01
+-5.70E+01	-8.48E-01	1.34E+00	3.31E-01
+-5.60E+01	-8.62E-01	1.31E+00	3.25E-01
+-5.50E+01	-8.75E-01	1.28E+00	3.19E-01
+-5.40E+01	-8.87E-01	1.25E+00	3.13E-01
+-5.30E+01	-8.98E-01	1.23E+00	3.08E-01
+-5.20E+01	-9.08E-01	1.20E+00	3.02E-01
+-5.10E+01	-9.18E-01	1.17E+00	2.96E-01
+-5.00E+01	-9.26E-01	1.14E+00	2.90E-01
+-4.90E+01	-9.33E-01	1.11E+00	2.84E-01
+-4.80E+01	-9.39E-01	1.08E+00	2.78E-01
+-4.70E+01	-9.44E-01	1.05E+00	2.72E-01
+-4.60E+01	-9.48E-01	1.02E+00	2.67E-01
+-4.50E+01	-9.52E-01	9.91E-01	2.61E-01
+-4.40E+01	-9.54E-01	9.61E-01	2.55E-01
+-4.30E+01	-9.55E-01	9.31E-01	2.49E-01
+-4.20E+01	-9.55E-01	9.01E-01	2.43E-01
+-4.10E+01	-9.55E-01	8.72E-01	2.37E-01
+-4.00E+01	-9.53E-01	8.42E-01	2.31E-01
+-3.90E+01	-9.51E-01	8.13E-01	2.25E-01
+-3.80E+01	-9.47E-01	7.84E-01	2.19E-01
+-3.70E+01	-9.43E-01	7.55E-01	2.14E-01
+-3.60E+01	-9.37E-01	7.26E-01	2.08E-01
+-3.50E+01	-9.31E-01	6.97E-01	2.02E-01
+-3.40E+01	-9.24E-01	6.69E-01	1.96E-01
+-3.30E+01	-9.17E-01	6.42E-01	1.91E-01
+-3.20E+01	-9.08E-01	6.14E-01	1.85E-01
+-3.10E+01	-8.99E-01	5.88E-01	1.80E-01
+-3.00E+01	-8.89E-01	5.61E-01	1.74E-01
+-2.90E+01	-8.79E-01	5.35E-01	1.69E-01
+-2.80E+01	-8.68E-01	5.10E-01	1.63E-01
+-2.70E+01	-8.56E-01	4.86E-01	1.58E-01
+-2.60E+01	-8.44E-01	4.61E-01	1.39E-01
+-2.50E+01	-8.32E-01	4.38E-01	1.20E-01
+-2.40E+01	-8.19E-01	4.15E-01	1.01E-01
+-2.30E+01	-8.06E-01	3.93E-01	8.18E-02
+-2.20E+01	-7.93E-01	3.72E-01	6.27E-02
+-2.10E+01	-7.80E-01	3.51E-01	4.36E-02
+-2.00E+01	-7.67E-01	3.31E-01	2.45E-02
+-1.90E+01	-7.55E-01	3.12E-01	5.42E-03
+-1.80E+01	-7.43E-01	2.94E-01	-1.37E-02
+-1.70E+01	-7.32E-01	2.77E-01	-3.28E-02
+-1.60E+01	-7.22E-01	2.60E-01	-5.19E-02
+-1.50E+01	-7.14E-01	2.45E-01	-7.10E-02
+-1.40E+01	-7.07E-01	2.30E-01	-9.01E-02
+-1.30E+01	-7.03E-01	2.16E-01	-1.09E-01
+-1.20E+01	-7.28E-01	2.57E-01	-1.28E-01
+-1.10E+01	-6.77E-01	2.44E-01	-1.24E-01
+-1.00E+01	-6.27E-01	2.24E-01	-1.18E-01
+-9.00E+00	-7.56E-01	1.83E-01	-1.30E-01
+-8.00E+00	-7.63E-01	1.62E-01	-1.29E-01
+-7.00E+00	-7.49E-01	1.39E-01	-1.26E-01
+-6.00E+00	-6.37E-01	1.32E-01	-1.12E-01
+-5.00E+00	-6.76E-01	1.00E-01	-1.11E-01
+-4.00E+00	-5.29E-01	1.00E-01	-9.23E-02
+-2.00E+00	-2.42E-01	1.02E-01	-5.63E-02
+0.00E+00	4.03E-02	9.87E-02	-2.36E-02
+2.00E+00	2.94E-01	9.58E-02	8.41E-03
+4.00E+00	5.47E-01	9.60E-02	4.61E-02
+5.00E+00	6.67E-01	9.74E-02	6.44E-02
+6.00E+00	7.91E-01	9.95E-02	8.32E-02
+7.00E+00	9.18E-01	1.02E-01	1.03E-01
+8.00E+00	1.04E+00	1.07E-01	1.21E-01
+9.00E+00	1.16E+00	1.08E-01	1.38E-01
+1.00E+01	1.27E+00	1.12E-01	1.55E-01
+1.10E+01	1.38E+00	1.18E-01	1.74E-01
+1.20E+01	1.47E+00	1.22E-01	1.90E-01
+1.30E+01	1.54E+00	1.27E-01	2.06E-01
+1.35E+01	1.58E+00	1.29E-01	2.15E-01
+1.40E+01	1.61E+00	1.31E-01	2.21E-01
+1.45E+01	1.63E+00	1.33E-01	2.27E-01
+1.50E+01	1.66E+00	1.42E-01	2.46E-01
+1.55E+01	1.67E+00	1.41E-01	2.43E-01
+1.60E+01	1.33E+00	1.55E-01	2.11E-01
+1.65E+01	1.29E+00	1.65E-01	2.07E-01
+1.70E+01	1.22E+00	1.77E-01	2.00E-01
+1.80E+01	1.20E+00	1.93E-01	1.97E-01
+1.90E+01	1.51E+00	2.03E-01	1.68E-01
+2.00E+01	1.48E+00	2.23E-01	1.40E-01
+2.10E+01	1.45E+00	2.43E-01	1.11E-01
+2.20E+01	1.43E+00	2.65E-01	8.26E-02
+2.30E+01	1.40E+00	2.87E-01	5.41E-02
+2.40E+01	1.38E+00	3.10E-01	2.55E-02
+2.50E+01	1.37E+00	3.33E-01	-3.08E-03
+2.60E+01	1.35E+00	3.58E-01	-3.17E-02
+2.70E+01	1.34E+00	3.83E-01	-6.02E-02
+2.80E+01	1.32E+00	4.08E-01	-8.88E-02
+2.90E+01	1.31E+00	4.34E-01	-1.17E-01
+3.00E+01	1.30E+00	4.61E-01	-1.46E-01
+3.10E+01	1.29E+00	4.89E-01	-1.75E-01
+3.20E+01	1.28E+00	5.17E-01	-2.03E-01
+3.30E+01	1.27E+00	5.45E-01	-2.32E-01
+3.40E+01	1.26E+00	5.74E-01	-2.35E-01
+3.50E+01	1.25E+00	6.03E-01	-2.38E-01
+3.60E+01	1.24E+00	6.32E-01	-2.41E-01
+3.70E+01	1.23E+00	6.62E-01	-2.44E-01
+3.80E+01	1.22E+00	6.93E-01	-2.48E-01
+3.90E+01	1.21E+00	7.23E-01	-2.51E-01
+4.00E+01	1.20E+00	7.54E-01	-2.55E-01
+4.10E+01	1.19E+00	7.85E-01	-2.59E-01
+4.20E+01	1.18E+00	8.16E-01	-2.63E-01
+4.30E+01	1.17E+00	8.47E-01	-2.67E-01
+4.40E+01	1.16E+00	8.78E-01	-2.71E-01
+4.50E+01	1.15E+00	9.09E-01	-2.75E-01
+4.60E+01	1.13E+00	9.40E-01	-2.79E-01
+4.70E+01	1.12E+00	9.72E-01	-2.84E-01
+4.80E+01	1.11E+00	1.00E+00	-2.88E-01
+4.90E+01	1.09E+00	1.03E+00	-2.92E-01
+5.00E+01	1.07E+00	1.06E+00	-2.97E-01
+5.10E+01	1.06E+00	1.10E+00	-3.02E-01
+5.20E+01	1.04E+00	1.13E+00	-3.06E-01
+5.30E+01	1.02E+00	1.16E+00	-3.11E-01
+5.40E+01	1.00E+00	1.19E+00	-3.16E-01
+5.50E+01	9.86E-01	1.22E+00	-3.20E-01
+5.60E+01	9.66E-01	1.24E+00	-3.25E-01
+5.70E+01	9.45E-01	1.27E+00	-3.30E-01
+5.80E+01	9.24E-01	1.30E+00	-3.35E-01
+5.90E+01	9.03E-01	1.33E+00	-3.40E-01
+6.00E+01	8.80E-01	1.36E+00	-3.44E-01
+6.10E+01	8.57E-01	1.38E+00	-3.49E-01
+6.20E+01	8.33E-01	1.41E+00	-3.54E-01
+6.30E+01	8.09E-01	1.43E+00	-3.59E-01
+6.40E+01	7.84E-01	1.46E+00	-3.64E-01
+6.50E+01	7.58E-01	1.48E+00	-3.69E-01
+6.60E+01	7.32E-01	1.51E+00	-3.73E-01
+6.70E+01	7.05E-01	1.53E+00	-3.78E-01
+6.80E+01	6.78E-01	1.55E+00	-3.83E-01
+6.90E+01	6.50E-01	1.57E+00	-3.88E-01
+7.00E+01	6.22E-01	1.59E+00	-3.92E-01
+7.10E+01	5.93E-01	1.61E+00	-3.97E-01
+7.20E+01	5.64E-01	1.63E+00	-4.02E-01
+7.30E+01	5.34E-01	1.65E+00	-4.06E-01
+7.40E+01	5.04E-01	1.67E+00	-4.11E-01
+7.50E+01	4.74E-01	1.68E+00	-4.15E-01
+7.60E+01	4.44E-01	1.70E+00	-4.19E-01
+7.70E+01	4.13E-01	1.71E+00	-4.24E-01
+7.80E+01	3.81E-01	1.72E+00	-4.28E-01
+7.90E+01	3.50E-01	1.74E+00	-4.32E-01
+8.00E+01	3.18E-01	1.75E+00	-4.36E-01
+8.10E+01	2.87E-01	1.76E+00	-4.40E-01
+8.20E+01	2.55E-01	1.77E+00	-4.44E-01
+8.30E+01	2.23E-01	1.77E+00	-4.48E-01
+8.40E+01	1.91E-01	1.78E+00	-4.51E-01
+8.50E+01	1.59E-01	1.79E+00	-4.55E-01
+8.60E+01	1.27E-01	1.79E+00	-4.58E-01
+8.70E+01	9.50E-02	1.80E+00	-4.62E-01
+8.80E+01	6.32E-02	1.80E+00	-4.65E-01
+8.90E+01	3.15E-02	1.80E+00	-4.68E-01
+9.00E+01	0.00E+00	1.80E+00	-4.71E-01
+9.10E+01	-3.14E-02	1.81E+00	-4.75E-01
+9.20E+01	-6.28E-02	1.80E+00	-4.78E-01
+9.30E+01	-9.41E-02	1.80E+00	-4.80E-01
+9.40E+01	-1.25E-01	1.80E+00	-4.83E-01
+9.50E+01	-1.56E-01	1.79E+00	-4.85E-01
+9.60E+01	-1.87E-01	1.79E+00	-4.87E-01
+9.70E+01	-2.18E-01	1.78E+00	-4.89E-01
+9.80E+01	-2.48E-01	1.77E+00	-4.91E-01
+9.90E+01	-2.78E-01	1.76E+00	-4.92E-01
+1.00E+02	-3.08E-01	1.75E+00	-4.94E-01
+1.01E+02	-3.37E-01	1.74E+00	-4.95E-01
+1.02E+02	-3.66E-01	1.73E+00	-4.96E-01
+1.03E+02	-3.95E-01	1.71E+00	-4.97E-01
+1.04E+02	-4.23E-01	1.70E+00	-4.98E-01
+1.05E+02	-4.50E-01	1.69E+00	-4.98E-01
+1.06E+02	-4.77E-01	1.67E+00	-4.99E-01
+1.07E+02	-5.03E-01	1.65E+00	-4.99E-01
+1.08E+02	-5.29E-01	1.63E+00	-4.99E-01
+1.09E+02	-5.54E-01	1.62E+00	-4.99E-01
+1.10E+02	-5.79E-01	1.60E+00	-4.98E-01
+1.11E+02	-6.02E-01	1.57E+00	-4.98E-01
+1.12E+02	-6.25E-01	1.55E+00	-4.97E-01
+1.13E+02	-6.47E-01	1.53E+00	-4.96E-01
+1.14E+02	-6.69E-01	1.51E+00	-4.95E-01
+1.15E+02	-6.89E-01	1.48E+00	-4.94E-01
+1.16E+02	-7.09E-01	1.46E+00	-4.92E-01
+1.17E+02	-7.28E-01	1.44E+00	-4.91E-01
+1.18E+02	-7.46E-01	1.41E+00	-4.89E-01
+1.19E+02	-7.63E-01	1.38E+00	-4.87E-01
+1.20E+02	-7.79E-01	1.36E+00	-4.84E-01
+1.21E+02	-7.95E-01	1.33E+00	-4.82E-01
+1.22E+02	-8.09E-01	1.30E+00	-4.79E-01
+1.23E+02	-8.22E-01	1.27E+00	-4.76E-01
+1.24E+02	-8.34E-01	1.24E+00	-4.73E-01
+1.25E+02	-8.46E-01	1.21E+00	-4.70E-01
+1.26E+02	-8.56E-01	1.18E+00	-4.67E-01
+1.27E+02	-8.65E-01	1.15E+00	-4.63E-01
+1.28E+02	-8.73E-01	1.12E+00	-4.59E-01
+1.29E+02	-8.80E-01	1.09E+00	-4.55E-01
+1.30E+02	-8.86E-01	1.06E+00	-4.51E-01
+1.31E+02	-8.91E-01	1.03E+00	-4.46E-01
+1.32E+02	-8.95E-01	1.00E+00	-4.42E-01
+1.33E+02	-8.98E-01	9.69E-01	-4.37E-01
+1.34E+02	-8.99E-01	9.37E-01	-4.32E-01
+1.35E+02	-9.00E-01	9.06E-01	-4.26E-01
+1.36E+02	-8.99E-01	8.75E-01	-4.21E-01
+1.37E+02	-8.98E-01	8.43E-01	-4.15E-01
+1.38E+02	-8.95E-01	8.12E-01	-4.09E-01
+1.39E+02	-8.91E-01	7.81E-01	-4.03E-01
+1.40E+02	-8.86E-01	7.50E-01	-3.97E-01
+1.41E+02	-8.80E-01	7.19E-01	-3.90E-01
+1.42E+02	-8.73E-01	6.88E-01	-3.84E-01
+1.43E+02	-8.65E-01	6.58E-01	-3.77E-01
+1.44E+02	-8.56E-01	6.28E-01	-3.70E-01
+1.45E+02	-8.46E-01	5.98E-01	-3.62E-01
+1.46E+02	-8.34E-01	5.69E-01	-3.55E-01
+1.47E+02	-8.22E-01	5.40E-01	-3.47E-01
+1.48E+02	-8.09E-01	5.11E-01	-3.39E-01
+1.49E+02	-7.95E-01	4.83E-01	-3.31E-01
+1.50E+02	-7.79E-01	4.56E-01	-3.23E-01
+1.51E+02	-7.63E-01	4.29E-01	-3.15E-01
+1.52E+02	-7.46E-01	4.03E-01	-3.06E-01
+1.53E+02	-7.28E-01	3.77E-01	-2.97E-01
+1.54E+02	-7.09E-01	3.52E-01	-2.88E-01
+1.55E+02	-6.89E-01	3.27E-01	-2.79E-01
+1.56E+02	-6.69E-01	3.04E-01	-2.70E-01
+1.57E+02	-6.47E-01	2.81E-01	-2.61E-01
+1.58E+02	-6.25E-01	2.59E-01	-2.51E-01
+1.59E+02	-6.02E-01	2.37E-01	-2.41E-01
+1.60E+02	-5.79E-01	2.17E-01	-2.31E-01
+1.61E+02	-5.54E-01	1.97E-01	-2.21E-01
+1.62E+02	-5.29E-01	1.78E-01	-2.11E-01
+1.63E+02	-5.03E-01	1.60E-01	-2.00E-01
+1.64E+02	-4.77E-01	1.43E-01	-1.89E-01
+1.65E+02	-4.50E-01	1.27E-01	-1.79E-01
+1.66E+02	-4.23E-01	1.11E-01	-1.68E-01
+1.67E+02	-3.95E-01	9.71E-02	-1.57E-01
+1.68E+02	-3.66E-01	8.38E-02	-1.45E-01
+1.69E+02	-3.37E-01	7.15E-02	-1.34E-01
+1.70E+02	-3.08E-01	6.03E-02	-1.22E-01
+1.71E+02	-2.78E-01	5.00E-02	-1.11E-01
+1.72E+02	-2.48E-01	4.09E-02	-9.89E-02
+1.73E+02	-2.18E-01	3.27E-02	-8.69E-02
+1.74E+02	-1.87E-01	2.57E-02	-7.49E-02
+1.75E+02	-1.56E-01	1.97E-02	-6.27E-02
+1.76E+02	-1.25E-01	1.48E-02	-5.04E-02
+1.77E+02	-9.41E-02	1.09E-02	-3.79E-02
+1.78E+02	-6.28E-02	8.19E-03	-2.54E-02
+1.79E+02	-3.14E-02	6.55E-03	-1.28E-02
+1.80E+02	0.00E+00	6.00E-03	0.00E+00
+1.80E+02	0.00E+00	6.00E-03	0.00E+00

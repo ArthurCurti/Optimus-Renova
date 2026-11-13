@@ -1,0 +1,45 @@
+-----  MExtremes v1.00.00g-mlb Input File  -------------------------------------------
+Extremes for Optimus 150
+-----  Job Options  ------------------------------------------------------------
+false   	  EchoInp           Echo input to <rootname>.echo as this file is being read.
+true              StrNames          Use channel names following a "$" instead of numbers when specifying channels in this input file.
+"%11.3e"          RealFmt           Format for outputting floating-point values in the plain-text files.
+-----  Input-Data Layout  ------------------------------------------------------
+5                 TitleLine         The row with the file title on it (zero if no title is available).
+7                 NamesLine         The row with the channel names on it (zero if no names are available or are specified below).
+8                 UnitsLine         The row with the channel units on it (zero if no units are available or are specified below).updatealphaweb 1.00.00c-mlb
+9                 FirstDataLine     The first row of data.
+0                 NumChans          The number of channels in each input file.
+ChanTitle    ChanUnits    Scale  Offset     NumCols rows of data follow.  Title and units strings must be 10 characters or less.
+-----  Calculated Channels  ----------------------------------------------------
+2                 NumCChan          The number calculated channels to generate.
+1234567890        Seed              The integer seed for the random number generator (-2,147,483,648 to 2,147,483,647)
+Col_Title    Units    Equation       Put each field in quotes.  Titles and units are limited to 10 characters.  NumCChan rows of data follow.
+"RootFxyb1"  "(kN)"   "sqrt( FileInfo.Time(:,$RootFxb1$).^2 + FileInfo.Time(:,$RootFyb1$).^2 )"
+"RootMxyb1"  "(kN·m)" "sqrt( FileInfo.Time(:,$RootMxb1$).^2 + FileInfo.Time(:,$RootMyb1$).^2 )"
+-----  Extreme Events  ---------------------------------------------------------
+1                 NumEETables       Number of tables of extreme events.
+0                 NumEECharts       Number of charts of extreme events.
+true              FindPeaks         Should we use the peak finder?
+false             WrEEvtsTxt        Write the extreme-event tables to a plain-text file?
+true              WrEEvtsXLS        Write the extreme-event tables to an Excel file?
+"xlsx"            XLStype           Type of Excel file ("xls"=>2003, "xlsx"=>2007).
+5                 ThemeColor        Excel color theme to use.  In Excel 2007, it is the column of the color chart (1-10).
+0.8               HeadTnS           Tint and shade of the header area (-1.0 to 1.0), with -1 being darkest and 1 lightest.
+0.9               DiagTnS           Tint and shade of the diagonal (-1.0 to 1.0), with -1 being darkest and 1 lightest.
+TableName           #Chans          ChanList                                                             #InfoChans  InfoChanList    (NumEETables rows of data follow)
+"Root1"                8            $RootFxb1$  $RootFyb1$  $RootFzb1$  $RootMxb1$  $RootMyb1$  $RootMzb1$  $RootFxyb1$  $RootMxyb1$     2      $Time$ $Wind1VelX$
+-----  Input Files  ------------------------------------------------------------
+1                 NumDLCs           The number of Design Load Cases
+10  1.0  1.0  1.0  1.0              "DLC 1.1"
+"dlc1.1_ntm03_s1.out"
+"dlc1.1_ntm05_s1.out"
+"dlc1.1_ntm07_s1.out"
+"dlc1.1_ntm09_s1.out"
+"dlc1.1_ntm11_s1.out"
+"dlc1.1_ntm13_s1.out"
+"dlc1.1_ntm15_s1.out"
+"dlc1.1_ntm17_s1.out"
+"dlc1.1_ntm19_s1.out"
+"dlc1.1_ntm21_s1.out"
+==EOF==                             DO NOT REMOVE OR CHANGE.  MUST COME JUST AFTER LAST LINE OF VALID INPUT.
