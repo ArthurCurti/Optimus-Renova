@@ -1,18 +1,19 @@
 
 FAST Summary File
 
-Predictions were generated on 30-Oct-2026 at 13:23:05 using OpenFAST, compiled on Jun 13 2025 at 13:19:07 as a 64-bit application using single precision at commit v4.0.5
+Predictions were generated on 11-Nov-2026 at 20:04:51 using OpenFAST, compiled on Jun 13 2025 at 13:19:07 as a 64-bit application using single precision at commit v4.0.5
   run with
     NWTC Subroutine Library
     ElastoDyn [not called]
     InflowWind
     ElastoDyn
     AeroDyn
+    ServoDyn
     Simplified-ElastoDyn (unknown version, unknown date) [not called]
     InflowWind
     AeroDyn
     AeroDisk (unknown version, unknown date) [not called]
-    ServoDyn (unknown version, unknown date) [not called]
+    ServoDyn
     HydroDyn (unknown version, unknown date) [not called]
     SubDyn (unknown version, unknown date) [not called]
     ExtPtfm_MCKF (unknown version, unknown date) [not called]
@@ -23,7 +24,7 @@ Predictions were generated on 30-Oct-2026 at 13:23:05 using OpenFAST, compiled o
     IceFloe (unknown version, unknown date) [not called]
     IceDyn (unknown version, unknown date) [not called]
 Description from the FAST input file: 
-  Generated with AeroElasticSE FAST driver
+  OPTIMUS Renova 8MW HS-Flenburg WS 2026/2027
 
 Interpolation order for input/output time histories: 2 (quadratic)
 Number of correction iterations:  1
@@ -33,11 +34,12 @@ Number of correction iterations:  1
   -------------------------------------------------
   Component          Time Step (s)    Subcycles (-)
   -----------------  ---------------  -------------
-  FAST (glue code)    1.000E-02
-  InflowWind          1.000E-02              1
-  ElastoDyn           1.000E-02              1
-  AeroDyn             1.000E-02              1
-  FAST output files   1.000E-02              1
+  FAST (glue code)    5.000E-02
+  InflowWind          5.000E-02              1
+  ElastoDyn           5.000E-02              1
+  AeroDyn             5.000E-02              1
+  ServoDyn            5.000E-02              1
+  FAST output files   1.000E+00             20^-1
 
 
    Requested Channels in FAST Output File(s)  
@@ -99,3 +101,5 @@ Number of correction iterations:  1
       53  RtFldPwr              (W)                   AeroDyn
       54  RtSpeed               (rpm)                 AeroDyn
       55  RtTSR                 (-)                   AeroDyn
+      56  GenPwr                (kW)                  ServoDyn
+      57  GenTq                 (kN-m)                ServoDyn
