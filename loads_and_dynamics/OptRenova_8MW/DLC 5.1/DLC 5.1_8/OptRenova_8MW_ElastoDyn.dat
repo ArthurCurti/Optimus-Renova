@@ -43,7 +43,7 @@ False                  PtfmYDOF      - Platform yaw rotation DOF (flag)
 ---------------------- TURBINE CONFIGURATION   ---------------------------------
 3                      NumBl         - Number of blades (-)
 85.4                   TipRad        - The distance from the rotor apex to the blade tip (meters)
-3.4                    HubRad        - The distance from the rotor apex to the blade root (meters)
+2.53                    HubRad        - The distance from the rotor apex to the blade root (meters)
 -4.0                   PreCone(1)    - Blade 1 cone angle (degrees)
 -4.0                   PreCone(2)    - Blade 2 cone angle (degrees)
 -4.0                   PreCone(3)    - Blade 3 cone angle (degrees) [unused for 2 blades]

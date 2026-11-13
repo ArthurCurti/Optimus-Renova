@@ -16,14 +16,14 @@ Default                DT            - Communication interval for controllers (s
 90.0                   BlPitchF(2)   - Blade 2 final pitch for pitch maneuvers (degrees)
 90.0                   BlPitchF(3)   - Blade 3 final pitch for pitch maneuvers (degrees) [unused for 2 blades]
 ---------------------- GENERATOR AND TORQUE CONTROL ----------------------------
-0                      VSContrl      - Variable-speed control mode {0: none, 1: simple VS, 3: user-defined from routine UserVSCont, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
+5                      VSContrl      - Variable-speed control mode {0: none, 1: simple VS, 3: user-defined from routine UserVSCont, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
 1                      GenModel      - Generator model {1: simple, 2: Thevenin, 3: user-defined from routine UserGen} (switch) [used only when VSContrl=0]
 94.4                   GenEff        - Generator efficiency [ignored by the Thevenin and user-defined generator models] (%)
 True                   GenTiStr      - Method to start the generator {T: timed using TimGenOn, F: generator speed using SpdGenOn} (flag)
 True                   GenTiStp      - Method to stop the generator {T: timed using TimGenOf, F: when generator power = 0} (flag)
 99999.9                SpdGenOn      - Generator speed to turn on the generator for a startup (HSS speed) (rpm) [used only when GenTiStr=False]
 0.0                    TimGenOn      - Time to turn on the generator for a startup (s) [used only when GenTiStr=True]
-99999.9                TimGenOf      - Time to turn off the generator (s) [used only when GenTiStp=True]
+120                    TimGenOf      - Time to turn off the generator (s) [used only when GenTiStp=True]
 ---------------------- SIMPLE VARIABLE-SPEED TORQUE CONTROL --------------------
 99999.9                VS_RtGnSp     - Rated generator speed for simple variable-speed generator control (HSS side) (rpm) [used only when VSContrl=1]
 99999.9                VS_RtTq       - Rated generator torque/constant generator torque in Region 3 for simple variable-speed generator control (HSS side) (N-m) [used only when VSContrl=1]
@@ -47,7 +47,7 @@ True                   GenTiStp      - Method to stop the generator {T: timed us
 1                      HSSBrMode     - HSS brake model {0: none, 1: simple, 3: user-defined from routine UserHSSBr, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
 125                       THSSBrDp      - Time to initiate deployment of the HSS brake (s)
 0.6                        HSSBrDT       - Time for HSS-brake to reach full deployment once initiated (sec) [used only when HSSBrMode=1]
-50492.99                   HSSBrTqF      - Fully deployed HSS-brake torque (N-m)
+9700000.0                  HSSBrTqF      - Fully deployed HSS-brake torque (N-m)
 ---------------------- NACELLE-YAW CONTROL -------------------------------------
 0                      YCMode        - Yaw control mode {0: none, 1: simple, 3: user-defined from routine UserYawCont, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
 99999.9                TYCOn         - Time to enable active yaw control (s) [unused when YCMode=0]

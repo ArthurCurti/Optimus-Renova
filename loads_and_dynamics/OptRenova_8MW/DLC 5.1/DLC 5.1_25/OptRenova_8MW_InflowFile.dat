@@ -11,7 +11,7 @@ False                  VelInterpCubic - Use cubic interpolation for velocity in 
 0.0                    WindVyiList   - List of coordinates in the inertial Y direction (m)
 115.0                  WindVziList   - List of coordinates in the inertial Z direction (m)
 ---------------------- PARAMETERS FOR STEADY WIND CONDITIONS ------------------- [used only for WindType = 1]
-8.4                   HWindSpeed    - Horizontal windspeed                            (m/s)
+25                   HWindSpeed    - Horizontal windspeed                            (m/s)
 115.0                  RefHt         - Reference height for horizontal wind speed      (m)
 0.2                    PLexp         - Power law exponent                              (-)
 ---------------------- PARAMETERS FOR UNIFORM WIND FILE ------------------------ [used only for WindType = 2]
