@@ -16,7 +16,7 @@ Default                DT            - Communication interval for controllers (s
 90.0                   BlPitchF(2)   - Blade 2 final pitch for pitch maneuvers (degrees)
 90.0                   BlPitchF(3)   - Blade 3 final pitch for pitch maneuvers (degrees) [unused for 2 blades]
 ---------------------- GENERATOR AND TORQUE CONTROL ----------------------------
-5                      VSContrl      - Variable-speed control mode {0: none, 1: simple VS, 3: user-defined from routine UserVSCont, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
+0                      VSContrl      - Variable-speed control mode {0: none, 1: simple VS, 3: user-defined from routine UserVSCont, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
 1                      GenModel      - Generator model {1: simple, 2: Thevenin, 3: user-defined from routine UserGen} (switch) [used only when VSContrl=0]
 94.4                   GenEff        - Generator efficiency [ignored by the Thevenin and user-defined generator models] (%)
 True                   GenTiStr      - Method to start the generator {T: timed using TimGenOn, F: generator speed using SpdGenOn} (flag)
@@ -74,8 +74,8 @@ True                   GenTiStp      - Method to stop the generator {T: timed us
 ---------------------- CABLE CONTROL -------------------------------------------
 0                      CCmode        - Cable control mode {0: none, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
 ---------------------- BLADED INTERFACE ---------------------------------------- [used only with Bladed Interface]
-"ServoData\libdiscon.dll" DLL_FileName - Name/location of the dynamic library {.dll [Windows] or .so [Linux]} in the Bladed-DLL format (-) [used only with Bladed Interface]
-"ServoData\OptRenova_8MW_DISCON.IN" DLL_InFile - Name of input file sent to the DLL (-) [used only with Bladed Interface]
+"ServoData\libdiscon_v2-71.dll" DLL_FileName - Name/location of the dynamic library {.dll [Windows] or .so [Linux]} in the Bladed-DLL format (-) [used only with Bladed Interface]
+"ServoData\OptRenova_8MW_DISCON_v2-71.IN" DLL_InFile - Name of input file sent to the DLL (-) [used only with Bladed Interface]
 "DISCON"               DLL_ProcName  - Name of procedure in DLL to be called (-) [case sensitive; used only with DLL Interface]
 Default                DLL_DT        - Communication interval for dynamic library (s) (or "default") [used only with Bladed Interface]
 False                  DLL_Ramp      - Whether a linear ramp should be used between DLL_DT time steps [introduces time shift when true] (flag)
