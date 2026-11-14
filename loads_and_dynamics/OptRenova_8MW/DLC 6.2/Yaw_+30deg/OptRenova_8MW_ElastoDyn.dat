@@ -25,13 +25,13 @@ False                  PtfmYDOF      - Platform yaw rotation DOF (flag)
 ---------------------- INITIAL CONDITIONS   ------------------------------------
 0.0                    OoPDefl       - Initial out-of-plane blade-tip displacement (meters)
 0.0                    IPDefl        - Initial in-plane blade-tip deflection (meters)
-99.0                    BlPitch(1)    - Blade 1 initial pitch (degrees)
-90.0                    BlPitch(2)    - Blade 2 initial pitch (degrees)
-90.0                    BlPitch(3)    - Blade 3 initial pitch (degrees) [unused for 2 blades]
+0.0                    BlPitch(1)    - Blade 1 initial pitch (degrees)
+0.0                    BlPitch(2)    - Blade 2 initial pitch (degrees)
+0.0                    BlPitch(3)    - Blade 3 initial pitch (degrees) [unused for 2 blades]
 0.0                    TeetDefl      - Initial or fixed teeter angle (degrees) [unused for 3 blades]
 0.0                    Azimuth       - Initial azimuth angle for blade 1 (degrees)
 9.3                    RotSpeed      - Initial or fixed rotor speed (rpm)
-30                    NacYaw        - Initial or fixed nacelle-yaw angle (degrees)
+30                     NacYaw        - Initial or fixed nacelle-yaw angle (degrees)
 0.0                    TTDspFA       - Initial fore-aft tower-top displacement (meters)
 0.0                    TTDspSS       - Initial side-to-side tower-top displacement (meters)
 0.0                    PtfmSurge     - Initial or fixed horizontal surge translational displacement of platform (meters)
@@ -43,7 +43,7 @@ False                  PtfmYDOF      - Platform yaw rotation DOF (flag)
 ---------------------- TURBINE CONFIGURATION   ---------------------------------
 3                      NumBl         - Number of blades (-)
 85.4                   TipRad        - The distance from the rotor apex to the blade tip (meters)
-3.4                    HubRad        - The distance from the rotor apex to the blade root (meters)
+2.53                    HubRad        - The distance from the rotor apex to the blade root (meters)
 -4.0                   PreCone(1)    - Blade 1 cone angle (degrees)
 -4.0                   PreCone(2)    - Blade 2 cone angle (degrees)
 -4.0                   PreCone(3)    - Blade 3 cone angle (degrees) [unused for 2 blades]
@@ -111,7 +111,7 @@ False                  PtfmYDOF      - Platform yaw rotation DOF (flag)
 99999.9                OmgCut        - Yaw angular velocity cutoff below which viscous friction is linearized (rad/s)
 ---------------------- DRIVETRAIN   --------------------------------------------
 96.1                   GBoxEff       - Gearbox efficiency (%)
-192.7                  GBRatio       - Gearbox ratio (-)
+1                      GBRatio       - Gearbox ratio (-)
 2317025000.0           DTTorSpr      - Drivetrain torsional spring (N-m/rad)
 9240560.0              DTTorDmp      - Drivetrain torsional damper (N-m/(rad/s))
 ---------------------- FURLING   -----------------------------------------------
