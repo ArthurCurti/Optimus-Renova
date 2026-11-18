@@ -113,6 +113,8 @@ ChartName         YLabel                                  Type       #Chans     
 "OptRenova8MW_6p1_V42_S6_Y8_IIA.out"
 "OptRenova8MW_6p1_V42_S6_Y0_IIA.out"
 "OptRenova8MW_6p1_V42_S6_Y-8_IIA.out"
-18  1.35   1.1   1.0   1.0  0  "DLC6.1"         (NumDLCfiles, PSF1, PSF2, PSF3, PSF4, BinModel, DLC_Name)
+18  1.35   1.1   1.0   1.0  0  "DLC6.2"         (NumDLCfiles, PSF1, PSF2, PSF3, PSF4, BinModel, DLC_Name)
+
+18  1.35   1.1   1.0   1.0  0  "DLC5.1"         (NumDLCfiles, PSF1, PSF2, PSF3, PSF4, BinModel, DLC_Name)
 
 ==EOF==                             DO NOT REMOVE OR CHANGE.  MUST COME JUST AFTER LAST LINE OF VALID INPUT.
