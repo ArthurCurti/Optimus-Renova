@@ -5,7 +5,7 @@ False                  Echo          - Echo input data to <RootName>.ech (flag)
 Default                DT            - Communication interval for controllers (s) (or "default")
 ---------------------- PITCH CONTROL -------------------------------------------
 5                      PCMode        - Pitch control mode {0: none, 3: user-defined from routine PitchCntrl, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
-200                      TPCOn         - Time to enable active pitch control (s) [unused when PCMode=0]
+0                      TPCOn         - Time to enable active pitch control (s) [unused when PCMode=0]
 120                    TPitManS(1)   - Time to start override pitch maneuver for blade 1 and end standard pitch control (s)
 120                    TPitManS(2)   - Time to start override pitch maneuver for blade 2 and end standard pitch control (s)
 120                    TPitManS(3)   - Time to start override pitch maneuver for blade 3 and end standard pitch control (s) [unused for 2 blades]

@@ -4,11 +4,11 @@ OPTIMUS Renova 8MW HS-Flenburg WS 2026/2027
 False                  Echo          - Echo input data to <RootName>.ech (flag)
 Default                DT            - Communication interval for controllers (s) (or "default")
 ---------------------- PITCH CONTROL -------------------------------------------
-5                      PCMode        - Pitch control mode {0: none, 3: user-defined from routine PitchCntrl, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
+0                      PCMode        - Pitch control mode {0: none, 3: user-defined from routine PitchCntrl, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
 0                      TPCOn         - Time to enable active pitch control (s) [unused when PCMode=0]
-120                    TPitManS(1)   - Time to start override pitch maneuver for blade 1 and end standard pitch control (s)
-120                    TPitManS(2)   - Time to start override pitch maneuver for blade 2 and end standard pitch control (s)
-120                    TPitManS(3)   - Time to start override pitch maneuver for blade 3 and end standard pitch control (s) [unused for 2 blades]
+0                      TPitManS(1)   - Time to start override pitch maneuver for blade 1 and end standard pitch control (s)
+0                      TPitManS(2)   - Time to start override pitch maneuver for blade 2 and end standard pitch control (s)
+0                      TPitManS(3)   - Time to start override pitch maneuver for blade 3 and end standard pitch control (s) [unused for 2 blades]
 10.0                   PitManRat(1)  - Pitch rate at which override pitch maneuver heads toward final pitch angle for blade 1 (deg/s)
 10.0                   PitManRat(2)  - Pitch rate at which override pitch maneuver heads toward final pitch angle for blade 2 (deg/s)
 10.0                   PitManRat(3)  - Pitch rate at which override pitch maneuver heads toward final pitch angle for blade 3 (deg/s) [unused for 2 blades]
@@ -44,10 +44,10 @@ True                   GenTiStp      - Method to stop the generator {T: timed us
 99999.9                TEC_RLR       - Rotor leakage reactance (ohms) [used only when VSContrl=0 and GenModel=2]
 99999.9                TEC_MR        - Magnetizing reactance (ohms) [used only when VSContrl=0 and GenModel=2]
 ---------------------- HIGH-SPEED SHAFT BRAKE ----------------------------------
-1                      HSSBrMode     - HSS brake model {0: none, 1: simple, 3: user-defined from routine UserHSSBr, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
-125                       THSSBrDp      - Time to initiate deployment of the HSS brake (s)
+0                      HSSBrMode     - HSS brake model {0: none, 1: simple, 3: user-defined from routine UserHSSBr, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
+0                       THSSBrDp      - Time to initiate deployment of the HSS brake (s)
 0.6                        HSSBrDT       - Time for HSS-brake to reach full deployment once initiated (sec) [used only when HSSBrMode=1]
-50492.99                   HSSBrTqF      - Fully deployed HSS-brake torque (N-m)
+9732000                 HSSBrTqF      - Fully deployed HSS-brake torque (N-m)
 ---------------------- NACELLE-YAW CONTROL -------------------------------------
 0                      YCMode        - Yaw control mode {0: none, 1: simple, 3: user-defined from routine UserYawCont, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
 99999.9                TYCOn         - Time to enable active yaw control (s) [unused when YCMode=0]

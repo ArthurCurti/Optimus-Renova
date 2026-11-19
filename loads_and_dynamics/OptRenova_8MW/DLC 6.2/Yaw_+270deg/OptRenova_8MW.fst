@@ -3,7 +3,7 @@ OPTIMUS Renova 8MW HS-Flenburg WS 2026/2027
 ---------------------- SIMULATION CONTROL --------------------------------------
 False                  Echo        - Echo input data to <RootName>.ech (flag)
 "FATAL"                AbortLevel  - Error level when simulation should abort (string) {"WARNING", "SEVERE", "FATAL"}
-600                    TMax        - Total run time (s)
+200                    TMax        - Total run time (s)
 0.05                   DT          - Recommended module time step (s)
 2                      InterpOrder - Interpolation order for input/output time history (-) {1=linear, 2=quadratic}
 1                      NumCrctn    - Number of correction iterations (-) {0=explicit calculation, i.e., no corrections}
@@ -13,7 +13,7 @@ False                  Echo        - Echo input data to <RootName>.ech (flag)
 1                      CompElast   - Compute structural dynamics (switch) {1=ElastoDyn; 2=ElastoDyn + BeamDyn for blades; 3=Simplified ElastoDyn}
 1                      CompInflow  - Compute inflow wind velocities (switch) {0=still air; 1=InflowWind; 2=external from ExtInflow}
 2                      CompAero    - Compute aerodynamic loads (switch) {0=None; 1=AeroDisk; 2=AeroDyn; 3=ExtLoads}
-1                      CompServo   - Compute control and electrical-drive dynamics (switch) {0=None; 1=ServoDyn}
+0                      CompServo   - Compute control and electrical-drive dynamics (switch) {0=None; 1=ServoDyn}
 0                      CompSeaSt   - Compute sea state information (switch) {0=None; 1=SeaState}
 0                      CompHydro   - Compute hydrodynamic loads (switch) {0=None; 1=HydroDyn}
 0                      CompSub     - Compute sub-structural dynamics (switch) {0=None; 1=SubDyn; 2=External Platform MCKF}
