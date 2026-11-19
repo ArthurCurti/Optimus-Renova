@@ -100,12 +100,31 @@ TableName           #Chans    ChanList                #InfoChans     InfoChanLis
 
 ChartName         YLabel                                  Type       #Chans        ChanList
 -----  Input Files  ------------------------------------------------------------
-1		  FileFormat        Flag determining input file format.  1 = ascii, 2 = binary
-1         NumDLCs           The number of Design Load Cases
-3  1.35   1.1   1.0   1.0  0  "DLC5.1"         (NumDLCfiles, PSF1, PSF2, PSF3, PSF4, BinModel, DLC_Name)
-"OptRenova_8MW_5p1V8.out"
-"OptRenova_8MW_5p1V12.out"
-"OptRenova_8MW_5p1V25.out"
+2		  FileFormat        Flag determining input file format.  1 = ascii, 2 = binary
+2         NumDLCs           The number of Design Load Cases
+18  1.35   1.1   1.0   1.0  0  "DLC6.1"         (NumDLCfiles, PSF1, PSF2, PSF3, PSF4, BinModel, DLC_Name)
+"Data\DLC6.1\OptRenova8MW_6p1_V42_S1_Y8_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p1_V42_S1_Y0_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p1_V42_S1_Y-8_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p1_V42_S2_Y8_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p1_V42_S2_Y0_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p1_V42_S2_Y-8_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p1_V42_S3_Y8_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p1_V42_S3_Y0_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p1_V42_S3_Y-8_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p1_V42_S4_Y8_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p1_V42_S4_Y0_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p1_V42_S4_Y-8_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p1_V42_S5_Y8_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p1_V42_S5_Y0_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p1_V42_S5_Y-8_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p1_V42_S6_Y8_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p1_V42_S6_Y0_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p1_V42_S6_Y-8_IIA.out"
+3   1.35   1.1   1.0   1.0  0  "DLC5.1"         (NumDLCfiles, PSF1, PSF2, PSF3, PSF4, BinModel, DLC_Name)
+"Data\DLC5.1\OptRenova8MW_5p1_V8_S1_Y0_IIA.out"
+"Data\DLC5.1\OptRenova8MW_5p1_V12_S1_Y0_IIA.out"
+"Data\DLC5.1\OptRenova8MW_5p1_V25_S1_Y0_IIA.out"
 
 
 ==EOF==                             DO NOT REMOVE OR CHANGE.  MUST COME JUST AFTER LAST LINE OF VALID INPUT.

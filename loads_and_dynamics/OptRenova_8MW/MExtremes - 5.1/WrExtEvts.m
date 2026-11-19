@@ -384,12 +384,14 @@ function WrExtEvts( outputFileRoot, SettingsFile, EEvTable, ProgName, Settings, 
 
          RngObj.Interior.ThemeColor   = ThemeColor;
          RngObj.Interior.TintAndShade = HeadTnS;
+         RngObj.Font.Color = 16777215;
 
          RngObj = SheetObj.Range( [ 'A', sprintf('%d',FirstData), ':C', sprintf('%d',2*NumEEChans+FirstData) ] );
 
          RngObj.Font.Bold             = true;
          RngObj.Interior.ThemeColor   = ThemeColor;
          RngObj.Interior.TintAndShade = HeadTnS;
+         RngObj.Font.Color = 16777215;
          RngObj.Columns.AutoFit();
 
 
@@ -412,6 +414,7 @@ function WrExtEvts( outputFileRoot, SettingsFile, EEvTable, ProgName, Settings, 
             RngObj.Font.Bold             = true;
             RngObj.Interior.ThemeColor   = ThemeColor;
             RngObj.Interior.TintAndShade = DiagTnS;
+            RngObj.Font.Color = 16777215;
 
          end % for Ch
 
