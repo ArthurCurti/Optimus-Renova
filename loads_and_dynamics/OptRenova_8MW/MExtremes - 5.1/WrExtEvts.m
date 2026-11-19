@@ -142,7 +142,7 @@ function WrExtEvts( outputFileRoot, SettingsFile, EEvTable, ProgName, Settings, 
 
          % Set up the name of the Excel file.  Delete the file if it already exists
 
-      XLSfile     = [  outputFileRoot, '_EEvts.', XLStype ];
+      XLSfile     = [  outputFileRoot, '_Loads.', XLStype ];
      % FullXLSfile = [ pwd, filesep, XLSfile ];
       XlRealFmt   = strrep( sprintf( RealFmt, 0 ), 'e', 'E' );
 
