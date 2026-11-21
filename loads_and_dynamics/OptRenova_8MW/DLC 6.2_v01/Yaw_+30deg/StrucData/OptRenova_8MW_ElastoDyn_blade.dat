@@ -1,0 +1,62 @@
+------- ELASTODYN V1.00.* INDIVIDUAL BLADE INPUT FILE --------------------------
+Generated with AeroElasticSE FAST driver
+---------------------- BLADE PARAMETERS ----------------------------------------
+30                     NBlInpSt    - Number of blade input stations (-)
+0.3252                 BldFlDmp1   - Blade flap mode #1 structural damping in percent of critical (%)
+0.8304                 BldFlDmp2   - Blade flap mode #2 structural damping in percent of critical (%)
+0.3614                 BldEdDmp1   - Blade edge mode #1 structural damping in percent of critical (%)
+---------------------- BLADE ADJUSTMENT FACTORS --------------------------------
+1.0                    FlStTunr1   - Blade flapwise modal stiffness tuner, 1st mode (-)
+1.0                    FlStTunr2   - Blade flapwise modal stiffness tuner, 2nd mode (-)
+1.0                    AdjBlMs     - Factor to adjust blade mass density (-)
+1.0                    AdjFlSt     - Factor to adjust blade flap stiffness (-)
+1.0                    AdjEdSt     - Factor to adjust blade edge stiffness (-)
+---------------------- DISTRIBUTED BLADE PROPERTIES ----------------------------
+BlFract	StrcTwst	BMassDen	FlpStff	EdgStff
+(-)	(deg)	(kg/m)	(Nm^2)	(Nm^2)
+0.000E+00	1.200E+01	2.372E+03	1.199E+11	1.199E+11
+3.400E-02	1.200E+01	1.293E+03	6.776E+10	4.236E+10
+6.900E-02	1.200E+01	1.227E+03	5.718E+10	3.589E+10
+1.030E-01	1.202E+01	1.100E+03	4.410E+10	3.186E+10
+1.380E-01	1.157E+01	9.787E+02	2.828E+10	3.084E+10
+1.720E-01	1.004E+01	8.625E+02	1.493E+10	3.059E+10
+2.070E-01	8.077E+00	7.645E+02	9.579E+09	2.858E+10
+2.410E-01	6.584E+00	6.746E+02	7.669E+09	2.384E+10
+2.760E-01	5.661E+00	6.128E+02	6.404E+09	1.982E+10
+3.100E-01	5.010E+00	5.597E+02	5.292E+09	1.603E+10
+3.450E-01	4.447E+00	5.200E+02	4.377E+09	1.308E+10
+3.790E-01	3.931E+00	4.895E+02	3.606E+09	1.075E+10
+4.140E-01	3.440E+00	4.600E+02	2.917E+09	8.685E+09
+4.480E-01	2.938E+00	4.324E+02	2.314E+09	6.952E+09
+4.830E-01	2.391E+00	4.136E+02	1.806E+09	5.451E+09
+5.170E-01	1.800E+00	3.869E+02	1.364E+09	4.305E+09
+5.520E-01	1.182E+00	3.592E+02	9.619E+08	3.348E+09
+5.860E-01	5.510E-01	3.330E+02	6.693E+08	2.605E+09
+6.210E-01	-7.700E-02	3.079E+02	4.552E+08	2.024E+09
+6.550E-01	-6.870E-01	2.825E+02	3.124E+08	1.559E+09
+6.900E-01	-1.263E+00	2.590E+02	2.286E+08	1.198E+09
+7.240E-01	-1.792E+00	2.337E+02	1.663E+08	9.164E+08
+7.590E-01	-2.262E+00	2.085E+02	1.188E+08	6.978E+08
+7.930E-01	-2.648E+00	1.839E+02	8.387E+07	5.256E+08
+8.280E-01	-2.943E+00	1.592E+02	5.829E+07	3.895E+08
+8.620E-01	-3.129E+00	1.339E+02	3.988E+07	2.809E+08
+8.970E-01	-3.136E+00	1.067E+02	2.590E+07	1.918E+08
+9.310E-01	-2.863E+00	7.439E+01	1.418E+07	1.125E+08
+9.660E-01	-2.046E+00	4.158E+01	4.479E+06	4.431E+07
+1.000E+00	-3.700E-02	2.379E+00	7.285E+02	2.465E+04
+---------------------- BLADE MODE SHAPES ---------------------------------------
+-0.3366731740192831    BldFl1Sh(2) - Flap mode 1, coeff of x^2
+3.8604495848936304     BldFl1Sh(3) -            , coeff of x^3
+-9.507162720432584     BldFl1Sh(4) -            , coeff of x^4
+12.179670487142497     BldFl1Sh(5) -            , coeff of x^5
+-5.196284177584261     BldFl1Sh(6) -            , coeff of x^6
+-2.1679636529758506    BldFl2Sh(2) - Flap mode 2, coeff of x^2
+16.571053771431224     BldFl2Sh(3) -            , coeff of x^3
+-52.29335232426447     BldFl2Sh(4) -            , coeff of x^4
+62.58791965317958      BldFl2Sh(5) -            , coeff of x^5
+-23.69765744737049     BldFl2Sh(6) -            , coeff of x^6
+0.26823590819889026    BldEdgSh(2) - Edge mode 1, coeff of x^2
+1.7185652699151985     BldEdgSh(3) -            , coeff of x^3
+-3.7976587747017136    BldEdgSh(4) -            , coeff of x^4
+5.201943784912145      BldEdgSh(5) -            , coeff of x^5
+-2.3910861883245196    BldEdgSh(6) -            , coeff of x^6
