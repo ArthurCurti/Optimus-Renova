@@ -30,7 +30,7 @@ False                  PtfmYDOF      - Platform yaw rotation DOF (flag)
 0.0                    BlPitch(3)    - Blade 3 initial pitch (degrees) [unused for 2 blades]
 0.0                    TeetDefl      - Initial or fixed teeter angle (degrees) [unused for 3 blades]
 0.0                    Azimuth       - Initial azimuth angle for blade 1 (degrees)
-9.0                    RotSpeed      - Initial or fixed rotor speed (rpm)
+0                      RotSpeed      - Initial or fixed rotor speed (rpm)
 0.0                    NacYaw        - Initial or fixed nacelle-yaw angle (degrees)
 0.0                    TTDspFA       - Initial fore-aft tower-top displacement (meters)
 0.0                    TTDspSS       - Initial side-to-side tower-top displacement (meters)
@@ -73,7 +73,7 @@ False                  PtfmYDOF      - Platform yaw rotation DOF (flag)
 0.0                    TipMass(3)    - Tip-brake mass, blade 3 (kg) [unused for 2 blades]
 69670                 HubMass       - Hub mass (kg)
 85558.3               HubIner       - Hub inertia about rotor axis [3 blades] or teeter axis [2 blades] (kg m^2)
-3801700.0              GenIner       - Generator inertia about HSS (kg m^2)
+272.00000              GenIner       - Generator inertia about HSS (kg m^2)
 400000                 NacMass       - Nacelle mass (kg)
 19006380.6             NacYIner      - Nacelle inertia about yaw axis (kg m^2)
 7456                  YawBrMass     - Yaw bearing mass (kg)
@@ -86,9 +86,9 @@ False                  PtfmYDOF      - Platform yaw rotation DOF (flag)
 0.0                    PtfmXZIner    - Platform xz moment of inertia about the platform CM (=-int(xzdm)) (kg m^2)
 ---------------------- BLADE   -------------------------------------------------
 16                     BldNodes      - Number of blade nodes (per blade) used for analysis (-)
-"..\StrucData\OptRenova_8MW_ElastoDyn_blade.dat" BldFile1      - Name of file containing properties for blade 1 (quoted string)
-"..\StrucData\OptRenova_8MW_ElastoDyn_blade.dat" BldFile2      - Name of file containing properties for blade 2 (quoted string)
-"..\StrucData\OptRenova_8MW_ElastoDyn_blade.dat" BldFile3      - Name of file containing properties for blade 3 (quoted string) [unused for 2 blades]
+"..\..\StrucData\OptRenova_8MW_ElastoDyn_blade.dat" BldFile1      - Name of file containing properties for blade 1 (quoted string)
+"..\..\StrucData\OptRenova_8MW_ElastoDyn_blade.dat" BldFile2      - Name of file containing properties for blade 2 (quoted string)
+"..\..\StrucData\OptRenova_8MW_ElastoDyn_blade.dat" BldFile3      - Name of file containing properties for blade 3 (quoted string) [unused for 2 blades]
 ---------------------- ROTOR-TEETER   ------------------------------------------
 0                      TeetMod       - Rotor-teeter spring/damper model {0: none, 1: standard, 2: user-defined from routine UserTeet} (switch) [unused for 3 blades]
 99999.9                TeetDmpP      - Rotor-teeter damper position (degrees) [used only for 2 blades and when TeetMod=1]
@@ -119,7 +119,7 @@ False                  Furling       - Read in additional model properties for f
 "none"                 FurlFile      - Name of file containing furling properties (quoted string) [unused when Furling=False]
 ---------------------- TOWER   -------------------------------------------------
 11                     TwrNodes      - Number of tower nodes used for analysis (-)
-"StrucData\OptRenova_8MW_ElastoDyn_tower.dat" TwrFile       - Name of file containing tower properties (quoted string)
+"..\..\StrucData\OptRenova_8MW_ElastoDyn_tower.dat" TwrFile       - Name of file containing tower properties (quoted string)
 ---------------------- OUTPUT   ------------------------------------------------
 False                  SumPrint      - Print summary data to "<RootName>.sum" (flag)
 1                      OutFile       - Switch to determine where output will be placed: {1: in module output file only; 2: in glue code output file only; 3: both} (currently unused)

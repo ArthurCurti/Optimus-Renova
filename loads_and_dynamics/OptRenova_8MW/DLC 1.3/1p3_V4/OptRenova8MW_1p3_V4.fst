@@ -31,13 +31,13 @@ False                  Echo        - Echo input data to <RootName>.ech (flag)
 99999.9                WtrDpth     - Water depth (m)
 99999.9                MSL2SWL     - Offset between still-water level and mean sea level (m) [positive upward]
 ---------------------- INPUT FILES ---------------------------------------------
-"OptRenova_8MW_ElastoDyn_1p2_V4.dat" EDFile      - Name of file containing ElastoDyn input parameters (quoted string)
+"OptRenova_8MW_ElastoDyn_1p3_V4.dat" EDFile      - Name of file containing ElastoDyn input parameters (quoted string)
 "none"                 BDBldFile(1) - Name of file containing BeamDyn input parameters for blade 1 (quoted string)
 "none"                 BDBldFile(2) - Name of file containing BeamDyn input parameters for blade 2 (quoted string)
 "none"                 BDBldFile(3) - Name of file containing BeamDyn input parameters for blade 3 (quoted string)
-"OptRenova_8MW_InflowFile_1p2_V4.dat" InflowFile  - Name of file containing inflow wind input parameters (quoted string)
-"..\AeroData\OptRenova_8MW_AeroDyn15.dat" AeroFile    - Name of file containing aerodynamic input parameters (quoted string)
-"OptRenova_8MW_ServoDyn__1p2_V4.dat" ServoFile   - Name of file containing control and electrical-drive input parameters (quoted string)
+"OptRenova_8MW_InflowFile_1p3_V4.dat" InflowFile  - Name of file containing inflow wind input parameters (quoted string)
+"..\..\AeroData\OptRenova_8MW_AeroDyn15.dat" AeroFile    - Name of file containing aerodynamic input parameters (quoted string)
+"OptRenova_8MW_ServoDyn_1p3_V4.dat" ServoFile   - Name of file containing control and electrical-drive input parameters (quoted string)
 "none"                 SeaStFile   - Name of file containing sea state input parameters (quoted string)
 "none"                 HydroFile   - Name of file containing hydrodynamic input parameters (quoted string)
 "none"                 SubFile     - Name of file containing sub-structural input parameters (quoted string)
@@ -48,7 +48,7 @@ False                  SumPrint    - Print summary data to "<RootName>.sum" (fla
 10.0                   SttsTime    - Amount of time between screen status messages (s)
 99999.9                ChkptTime   - Amount of time between creating checkpoint files for potential restart (s)
 0.1                    DT_Out      - Time step for tabular output (s) (or "default")
-60.0                   TStart      - Time to begin tabular output (s)
+0                      TStart      - Time to begin tabular output (s)
 1                      OutFileFmt  - Format for tabular (time-marching) output file (switch) {1: text file [<RootName>.out], 2: binary file [<RootName>.outb], 3: both 1 and 2, 4: uncompressed binary [<RootName>.outb, 5: both 1 and 4}
 True                   TabDelim    - Use tab delimiters in text tabular output file? (flag) {uses spaces if false}
 "ES10.3E2"             OutFmt      - Format used for text tabular output, excluding the time channel.  Resulting field should be 10 characters. (quoted string)
