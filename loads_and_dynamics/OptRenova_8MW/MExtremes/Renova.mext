@@ -101,8 +101,8 @@ TableName           #Chans    ChanList                #InfoChans     InfoChanLis
 ChartName         YLabel                                  Type       #Chans        ChanList
 -----  Input Files  ------------------------------------------------------------
 1		  FileFormat        Flag determining input file format.  1 = ascii, 2 = binary
-1         NumDLCs           The number of Design Load Cases
-18  1.35   1.1   1.0   1.0  0  "DLC6.1"         (NumDLCfiles, PSF1, PSF2, PSF3, PSF4, BinModel, DLC_Name)
+3         NumDLCs           The number of Design Load Cases
+9  1.35   1.1   1.0   1.0  0  "DLC6.1"         (NumDLCfiles, PSF1, PSF2, PSF3, PSF4, BinModel, DLC_Name)
 "Data\DLC6.1\OptRenova8MW_6p1_V42_S1_Y8_IIA.out"
 "Data\DLC6.1\OptRenova8MW_6p1_V42_S1_Y0_IIA.out"
 "Data\DLC6.1\OptRenova8MW_6p1_V42_S1_Y-8_IIA.out"
@@ -112,15 +112,16 @@ ChartName         YLabel                                  Type       #Chans     
 "Data\DLC6.1\OptRenova8MW_6p1_V42_S3_Y8_IIA.out"
 "Data\DLC6.1\OptRenova8MW_6p1_V42_S3_Y0_IIA.out"
 "Data\DLC6.1\OptRenova8MW_6p1_V42_S3_Y-8_IIA.out"
-"Data\DLC6.1\OptRenova8MW_6p1_V42_S4_Y8_IIA.out"
-"Data\DLC6.1\OptRenova8MW_6p1_V42_S4_Y0_IIA.out"
-"Data\DLC6.1\OptRenova8MW_6p1_V42_S4_Y-8_IIA.out"
-"Data\DLC6.1\OptRenova8MW_6p1_V42_S5_Y8_IIA.out"
-"Data\DLC6.1\OptRenova8MW_6p1_V42_S5_Y0_IIA.out"
-"Data\DLC6.1\OptRenova8MW_6p1_V42_S5_Y-8_IIA.out"
-"Data\DLC6.1\OptRenova8MW_6p1_V42_S6_Y8_IIA.out"
-"Data\DLC6.1\OptRenova8MW_6p1_V42_S6_Y0_IIA.out"
-"Data\DLC6.1\OptRenova8MW_6p1_V42_S6_Y-8_IIA.out"
+18  1.35   1.1   1.0   1.0  0  "DLC6.2"         (NumDLCfiles, PSF1, PSF2, PSF3, PSF4, BinModel, DLC_Name)
+"Data\DLC6.1\OptRenova8MW_6p2_V42_S1_Y30_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p2_V42_S1_Y60_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p2_V42_S1_Y120_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p2_V42_S1_Y150_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p2_V42_S1_Y180_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p2_V42_S1_Y210_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p2_V42_S1_Y240_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p2_V42_S1_Y300_IIA.out"
+"Data\DLC6.1\OptRenova8MW_6p2_V42_S1_Y330_IIA.out"
 
 
 
