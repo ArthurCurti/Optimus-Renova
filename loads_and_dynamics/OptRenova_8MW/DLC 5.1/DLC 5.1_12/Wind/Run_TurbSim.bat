@@ -2,7 +2,7 @@
 @echo off
 cd /d "%~dp0"
 
-set "TurbSim_Path=E:\Optimus-Renova\loads_and_dynamics"
+set "TurbSim_Path=C:\Users\khali\Documents\GitHub\Optimus-Renova\loads_and_dynamics"
 
 for %%F in (*.inp) do (
     echo Running TurbSim with %%F
