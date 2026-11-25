@@ -1,9 +1,9 @@
 ------- AERODYN v15.03.* INPUT FILE ------------------------------------------------
-Generated with AeroElasticSE FAST driver
+OPTIMUS Renova 8MW HS-Flenburg WS 2026/2027
 ======  General Options  ============================================================================
 False                  Echo        - Echo the input to "<rootname>.AD.ech"?  (flag)
 Default                DTAero      - Time interval for aerodynamic calculations {or "default"} (s)
-0                      Wake_Mod    - Wake/induction model (switch) {0=none, 1=BEMT, 3=OLAF} [Wake_Mod cannot be 2 or 3 when linearizing]
+1                      Wake_Mod    - Wake/induction model (switch) {0=none, 1=BEMT, 3=OLAF} [Wake_Mod cannot be 2 or 3 when linearizing]
 1                      TwrPotent   - Type tower influence on wind based on potential flow around the tower (switch) {0=none, 1=baseline potential flow, 2=potential flow with Bak correction}
 1                      TwrShadow   - Calculate tower influence on wind based on downstream tower shadow (switch) {0=none, 1=Powles model, 2=Eames model}
 True                   TwrAero     - Calculate tower aerodynamic loads? (flag)
@@ -43,10 +43,10 @@ default                SectAvgPsiFwd - Forward azimuth relative to blade where t
 2                      DBEMT_Mod   - Type of dynamic BEMT (DBEMT) model {0=No Dynamic Wake, -1=Frozen Wake for linearization, 1:constant tau1, 2=time-dependent tau1, 3=constant tau1 with continuous formulation} (-)
 23.7972                tau1_const  - Time constant for DBEMT (s) [used only when Wake_Mod=2 and DBEMT_Mod=1]
 ======  OLAF -- cOnvecting LAgrangian Filaments (Free Vortex Wake) Theory Options  ================== [used only when Wake_Mod=3]
-"none"           OLAFInputFileName - Input file for OLAF [used only when Wake_Mod=3]
+OptRenova_8MW_OLAF.dat OLAFInputFileName - Input file for OLAF [used only when Wake_Mod=3]
 ======  Unsteady Airfoil Aerodynamics Options  ====================================================
 True                   AoA34       - Sample the angle of attack (AoA) at the 3/4 chord or the AC point {default=True} [always used]
-0                      UA_Mod      - Unsteady Aero Model Switch (switch) {0=Quasi-steady (no UA), 2=B-L Gonzalez, 3=B-L Minnema/Pierce, 4=B-L HGM 4-states, 5=B-L HGM+vortex 5 states, 6=Oye, 7=Boeing-Vertol}
+3                      UA_Mod      - Unsteady Aero Model Switch (switch) {0=Quasi-steady (no UA), 2=B-L Gonzalez, 3=B-L Minnema/Pierce, 4=B-L HGM 4-states, 5=B-L HGM+vortex 5 states, 6=Oye, 7=Boeing-Vertol}
 True                   FLookup     - Flag to indicate whether a lookup for f' will be calculated (TRUE) or whether best-fit exponential equations will be used (FALSE); if FALSE S1-S4 must be provided in airfoil input files (flag) [used only when UA_Mod>0]
 3               IntegrationMethod  - Switch to indicate which integration method UA uses (1=RK4, 2=AB4, 3=ABM4, 4=BDF2)
 0.15                   UAStartRad  - Starting radius for dynamic stall (fraction of rotor radius [0.0,1.0]) [used only when UA_Mod>0; if line is missing UAStartRad=0]
@@ -58,29 +58,15 @@ True                   FLookup     - Flag to indicate whether a lookup for f' wi
 3                      InCol_Cd    - The column in the airfoil tables that contains the drag coefficient (-)
 4                      InCol_Cm    - The column in the airfoil tables that contains the pitching-moment coefficient; use zero if there is no Cm column (-)
 0                      InCol_Cpmin - The column in the airfoil tables that contains the Cpmin coefficient; use zero if there is no Cpmin column (-)
-30                     NumAFfiles  - Number of airfoil files used (-)
+16                      NumAFfiles  - Number of airfoil files used (-)
 "circular_Optimus_Renova_circular_Polar.dat"    AFNames            - Airfoil file names (NumAFfiles lines) (quoted strings)
 "circular_Optimus_Renova_circular_Polar.dat"
 "circular_FB90_blend_t93.0_Optimus_Renova_circular_FB90_blend_t93.0_Imported_Polar_360_V.dat"
-"circular_FB90_blend_t93.0_Optimus_Renova_circular_FB90_blend_t93.0_Imported_Polar_360_V.dat"
 "FB70_FB60_blend_t61.0_Optimus_Renova_D60B-V5_Polar_Re_2M_360_V.dat"
-"FB70_FB60_blend_t61.0_Optimus_Renova_D60B-V5_Polar_Re_2M_360_V.dat"
-"D60B-V5_Optimus_Renova_D60B-V5_Polar_Re_2M_360_V.dat"
-"FFA-W3-480_Optimus_Renova_FFA-W3-480_Re2.570_M0.05_N9.0_360_V.dat"
 "FFA-W3-480_Optimus_Renova_FFA-W3-480_Re2.570_M0.05_N9.0_360_V.dat"
 "FFA-W3-360_Optimus_Renova_FFA-W3-360_Re2.570_M0.05_N9.0_360_V.dat"
 "FFA-W3-360_Optimus_Renova_FFA-W3-360_Re2.570_M0.05_N9.0_360_V.dat"
 "FFA-W3-301_Optimus_Renova_FFA-W3-301_Re2.570_M0.05_N9.0_360_V.dat"
-"FFA-W3-301_Optimus_Renova_FFA-W3-301_Re2.570_M0.05_N9.0_360_V.dat"
-"FFA-W3-301_Optimus_Renova_FFA-W3-301_Re2.570_M0.05_N9.0_360_V.dat"
-"FFA-W3-301_Optimus_Renova_FFA-W3-301_Re2.570_M0.05_N9.0_360_V.dat"
-"FFA-W3-241_Optimus_Renova_FFA-W3-241_Re2.570_M0.05_N9.0_360_V.dat"
-"FFA-W3-241_Optimus_Renova_FFA-W3-241_Re2.570_M0.05_N9.0_360_V.dat"
-"FFA-W3-241_Optimus_Renova_FFA-W3-241_Re2.570_M0.05_N9.0_360_V.dat"
-"FFA-W3-241_Optimus_Renova_FFA-W3-241_Re2.570_M0.05_N9.0_360_V.dat"
-"FFA-W3-241_Optimus_Renova_FFA-W3-241_Re2.570_M0.05_N9.0_360_V.dat"
-"FFA-W3-241_Optimus_Renova_FFA-W3-241_Re2.570_M0.05_N9.0_360_V.dat"
-"FFA-W3-241_Optimus_Renova_FFA-W3-241_Re2.570_M0.05_N9.0_360_V.dat"
 "FFA-W3-241_Optimus_Renova_FFA-W3-241_Re2.570_M0.05_N9.0_360_V.dat"
 "FFA-W3-241_Optimus_Renova_FFA-W3-241_Re2.570_M0.05_N9.0_360_V.dat"
 "FFA-W3-241_Optimus_Renova_FFA-W3-241_Re2.570_M0.05_N9.0_360_V.dat"
@@ -123,11 +109,11 @@ TwrElev        TwrDiam        TwrCd          TwrTI          TwrCb !TwrTI used on
  1.120000000000000E+02  4.500000000000000E+00  5.000000000000000e-01  1.000000000000000e-01  0.000000000000000e+00 
 ======  Outputs  ====================================================================================
 False                  SumPrint    - Generate a summary file listing input options and interpolated properties to "<rootname>.AD.sum"?  (flag)
-0                      NBlOuts     - Number of blade node outputs [0 - 9] (-)
-0                      BlOutNd     - Blade nodes whose values will be output  (-)
+9                      NBlOuts     - Number of blade node outputs [0 - 9] (-)
+1, 2, 4, 6, 8, 10, 12, 14, 16 BlOutNd     - Blade nodes whose values will be output  (-)
 0                      NTwOuts     - Number of tower node outputs [0 - 9]  (-)
 0                      TwOutNd     - Tower nodes whose values will be output  (-)
-                       OutList     - The next line(s) contains a list of output parameters.  See OutListParameters.xlsx for a listing of available output channels, (-)
+                   OutList             - The next line(s) contains a list of output parameters.  See OutListParameters.xlsx for a listing of available output channels, (-)
 "RtFldCp"
 "RtFldCq"
 "RtFldCt"
