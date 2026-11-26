@@ -1,0 +1,33 @@
+----------------------------------------QBlade Blade Definition File------------------------------------------------
+Generated with : QBlade CE v2.0.9.7b_beta unix
+Archive Format: 310043
+Time : 02:38:28
+Date : 29.10.2026
+
+----------------------------------------Object Name-----------------------------------------------------------------
+Optimus_Renova_Blade                               OBJECTNAME         - the name of the blade object
+
+----------------------------------------Parameters------------------------------------------------------------------
+HAWT                                               ROTORTYPE          - the rotor type
+false                                              INVERTEDFOILS      - invert the airfoils? (only VAWT) [bool]
+3                                                  NUMBLADES          - number of blades
+
+----------------------------------------Blade Data------------------------------------------------------------------
+POS_[m]             CHORD_[m]           TWIST_[deg]         OFFSET_Y_[m]        OFFSET_X_[m]        P_AXIS_Y_[-]        P_AXIS_X_[-]        POLAR_FILE          
+3.40000             3.40000             12.00               0.00000             0.00000             0.50000             0.00000             Polars/circular_MultiRePolar.plr
+5.04000             3.40000             12.00               0.00000             0.00000             0.50000             0.00000             Polars/circular_MultiRePolar.plr
+6.60000             3.42000             12.00               0.00000             0.00000             0.50000             0.00000             Polars/circular_FB90_blend_t93.0Optimus_Renova_MultiRePolar.plr
+9.55000             3.54000             11.80               0.00000             0.00000             0.50000             0.00000             Polars/FB70_FB60_blend_t61.0Optimus_Renova_MultiRePolar.plr
+13.24000            3.69000             11.20               0.00000             0.00000             0.50000             0.00000             Polars/FFA-W3-480Optimus_Renova_MultiRePolar.plr
+18.16000            4.22000             9.20                0.00000             0.00000             0.50000             0.00000             Polars/FFA-W3-360Optimus_Renova_MultiRePolar.plr
+23.90000            4.30000             7.50                0.00000             0.00000             0.50000             0.00000             Polars/FFA-W3-360Optimus_Renova_MultiRePolar.plr
+32.10000            4.02000             5.10                0.00000             0.00000             0.50000             0.00000             Polars/FFA-W3-301Optimus_Renova_MultiRePolar.plr
+40.30000            3.55000             3.20                0.00000             0.00000             0.50000             0.00000             Polars/FFA-W3-241Optimus_Renova_MultiRePolar.plr
+48.50000            3.05000             1.80                0.00000             0.00000             0.50000             0.00000             Polars/FFA-W3-241Optimus_Renova_MultiRePolar.plr
+56.70000            2.52000             0.50                0.00000             0.00000             0.50000             0.00000             Polars/FFA-W3-241Optimus_Renova_MultiRePolar.plr
+64.90000            2.01000             -0.40               0.00000             0.00000             0.50000             0.00000             Polars/FFA-W3-211Optimus_Renova_MultiRePolar.plr
+71.46000            1.62000             -1.20               0.00000             0.00000             0.50000             0.00000             Polars/FFA-W3-211Optimus_Renova_MultiRePolar.plr
+77.20000            1.25000             -2.10               0.00000             0.00000             0.50000             0.00000             Polars/FFA-W3-211Optimus_Renova_MultiRePolar.plr
+81.30000            0.95000             -2.80               0.00000             0.00000             0.50000             0.00000             Polars/FFA-W3-211Optimus_Renova_MultiRePolar.plr
+85.40000            0.21000             -4.00               0.00000             0.00000             0.50000             0.00000             Polars/FFA-W3-211Optimus_Renova_MultiRePolar.plr
+

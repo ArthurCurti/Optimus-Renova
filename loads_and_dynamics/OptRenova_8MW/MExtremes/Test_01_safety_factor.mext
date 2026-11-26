@@ -1,0 +1,176 @@
+-----  MExtremes v1.00.00g-mlb Input File  -------------------------------------------
+Test #01 (-Names, +Chans, +CC, +WrEEvtsTxt, -WrEEvtsXLS, +Multi).
+-----  Job Options  ------------------------------------------------------------
+true              EchoInp           Echo input to <rootname>.echo as this file is being read.
+true            StrNames          Use channel names following a "$" instead of numbers when specifying channels in this input file.
+"%12.4e"          RealFmt           Format for outputting floating-point values in the plain-text files.
+-----  Input-Data Layout  ------------------------------------------------------
+5                 TitleLine         The row with the file title on it (zero if no title is available).
+0                 NamesLine         The row with the channel names on it (zero if no names are available or are specified below).
+0                 UnitsLine         The row with the channel units on it (zero if no units are available or are specified below).
+9                 FirstDataLine     The first row of data.
+133               NumChans:         The number of channels in each input file.
+ChanTitle    ChanUnits    Scale  Offset	PSFtype     NumCols rows of data follow.  Title and units strings must be 10 characters or less.
+"Time"       "(sec)"       1.0    0.0	    2
+"WindVxi"    "(m/sec)"     1.0    0.0       2
+"WindVyi"    "(m/sec)"     1.0    0.0       2
+"WindVzi"    "(m/sec)"     1.0    0.0       2
+"WaveElev"   "(m)"         1.0    0.0       2
+"Wave1Vxi"   "(m/sec)"     1.0    0.0       2
+"Wave1Vyi"   "(m/sec)"     1.0    0.0       2
+"Wave1Vzi"   "(m/sec)"     1.0    0.0       2
+"Wave1Axi"   "(m/sec^2)"   1.0    0.0       2
+"Wave1Ayi"   "(m/sec^2)"   1.0    0.0       2
+"Wave1Azi"   "(m/sec^2)"   1.0    0.0       2
+"GenPwr"     "(kW)"        1.0    0.0       2
+"GenTq"      "(kN·m)"      1.0    0.0       2
+"HSSBrTq"    "(kN·m)"      1.0    0.0       2
+"BldPitch1"  "(deg)"       1.0    0.0       2
+"BldPitch2"  "(deg)"       1.0    0.0       2
+"BldPitch3"  "(deg)"       1.0    0.0       2
+"Azimuth"    "(deg)"       1.0    0.0       2
+"RotSpeed"   "(rpm)"       1.0    0.0       2
+"GenSpeed"   "(rpm)"       1.0    0.0       2
+"NacYaw"     "(deg)"       1.0    0.0       2
+"NacYawErr"  "(deg)"       1.0    0.0       2
+"OoPDefl1"   "(m)"         1.0    0.0       2
+"IPDefl1"    "(m)"         1.0    0.0       2
+"TwstDefl1"  "(deg)"       1.0    0.0       2
+"OoPDefl2"   "(m)"         1.0    0.0       2
+"IPDefl2"    "(m)"         1.0    0.0       2
+"TwstDefl2"  "(deg)"       1.0    0.0       2
+"OoPDefl3"   "(m)"         1.0    0.0       2
+"IPDefl3"    "(m)"         1.0    0.0       2
+"TwstDefl3"  "(deg)"       1.0    0.0       2
+"TwrClrnc1"  "(m)"         1.0    0.0       2
+"TwrClrnc2"  "(m)"         1.0    0.0       2
+"TwrClrnc3"  "(m)"         1.0    0.0       2
+"NcIMUTAxs"  "(m/sec^2)"   1.0    0.0       2
+"NcIMUTAys"  "(m/sec^2)"   1.0    0.0       2
+"NcIMUTAzs"  "(m/sec^2)"   1.0    0.0       2
+"TTDspFA"    "(m)"         1.0    0.0       2
+"TTDspSS"    "(m)"         1.0    0.0       2
+"TTDspTwst"  "(deg)"       1.0    0.0       2
+"PtfmSurge"  "(m)"         1.0    0.0       2
+"PtfmSway"   "(m)"         1.0    0.0       2
+"PtfmHeave"  "(m)"         1.0    0.0       2
+"PtfmRoll"   "(deg)"       1.0    0.0       2
+"PtfmPitch"  "(deg)"       1.0    0.0       2
+"PtfmYaw"    "(deg)"       1.0    0.0       2
+"PtfmTAxt"   "(m/sec^2)"   1.0    0.0       2
+"PtfmTAyt"   "(m/sec^2)"   1.0    0.0       2
+"PtfmTAzt"   "(m/sec^2)"   1.0    0.0       2
+"RootFxc1"   "(kN)"        1.0    0.0       2
+"RootFyc1"   "(kN)"        1.0    0.0       2
+"RootFzc1"   "(kN)"        1.0    0.0       2
+"RootMxc1"   "(kN·m)"      1.0    0.0       2
+"RootMyc1"   "(kN·m)"      1.0    0.0       2
+"RootMzc1"   "(kN·m)"      1.0    0.0       2
+"RootFxc2"   "(kN)"        1.0    0.0       2
+"RootFyc2"   "(kN)"        1.0    0.0       2
+"RootFzc2"   "(kN)"        1.0    0.0       2
+"RootMxc2"   "(kN·m)"      1.0    0.0       2
+"RootMyc2"   "(kN·m)"      1.0    0.0       2
+"RootMzc2"   "(kN·m)"      1.0    0.0       2
+"RootFxc3"   "(kN)"        1.0    0.0       2
+"RootFyc3"   "(kN)"        1.0    0.0       2
+"RootFzc3"   "(kN)"        1.0    0.0       2
+"RootMxc3"   "(kN·m)"      1.0    0.0       2
+"RootMyc3"   "(kN·m)"      1.0    0.0       2
+"RootMzc3"   "(kN·m)"      1.0    0.0       2
+"Spn1MLxb1"  "(kN·m)"      1.0    0.0       2
+"Spn1MLyb1"  "(kN·m)"      1.0    0.0       2
+"Spn1MLzb1"  "(kN·m)"      1.0    0.0       2
+"Spn1MLxb2"  "(kN·m)"      1.0    0.0       2
+"Spn1MLyb2"  "(kN·m)"      1.0    0.0       2
+"Spn1MLzb2"  "(kN·m)"      1.0    0.0       2
+"Spn1MLxb3"  "(kN·m)"      1.0    0.0       2
+"Spn1MLyb3"  "(kN·m)"      1.0    0.0       2
+"Spn1MLzb3"  "(kN·m)"      1.0    0.0       2
+"RotThrust"  "(kN)"        1.0    0.0       2
+"LSSGagFya"  "(kN)"        1.0    0.0       2
+"LSSGagFza"  "(kN)"        1.0    0.0       2
+"RotTorq"    "(kN·m)"      1.0    0.0       2
+"LSSGagMya"  "(kN·m)"      1.0    0.0       2
+"LSSGagMza"  "(kN·m)"      1.0    0.0       2
+"YawBrFxp"   "(kN)"        1.0    0.0       2
+"YawBrFyp"   "(kN)"        1.0    0.0       2
+"YawBrFzp"   "(kN)"        1.0    0.0       2
+"YawBrMxp"   "(kN·m)"      1.0    0.0       2
+"YawBrMyp"   "(kN·m)"      1.0    0.0       2
+"YawBrMzp"   "(kN·m)"      1.0    0.0       2
+"TwrBsFxt"   "(kN)"        1.0    0.0       2
+"TwrBsFyt"   "(kN)"        1.0    0.0       2
+"TwrBsFzt"   "(kN)"        1.0    0.0       2
+"TwrBsMxt"   "(kN·m)"      1.0    0.0       2
+"TwrBsMyt"   "(kN·m)"      1.0    0.0       2
+"TwrBsMzt"   "(kN·m)"      1.0    0.0       2
+"TwHt1MLxt"  "(kN·m)"      1.0    0.0       2
+"TwHt1MLyt"  "(kN·m)"      1.0    0.0       2
+"TwHt1MLzt"  "(kN·m)"      1.0    0.0       2
+"Fair1Ten"   "(kN)"        1.0    0.0       2
+"Fair1Ang"   "(deg)"       1.0    0.0       2
+"Anch1Ten"   "(kN)"        1.0    0.0       2
+"Anch1Ang"   "(deg)"       1.0    0.0       2
+"Fair2Ten"   "(kN)"        1.0    0.0       2
+"Fair2Ang"   "(deg)"       1.0    0.0       2
+"Anch2Ten"   "(kN)"        1.0    0.0       2
+"Anch2Ang"   "(deg)"       1.0    0.0       2
+"Fair3Ten"   "(kN)"        1.0    0.0       2
+"Fair3Ang"   "(deg)"       1.0    0.0       2
+"Anch3Ten"   "(kN)"        1.0    0.0       2
+"Anch3Ang"   "(deg)"       1.0    0.0       2
+"Fair4Ten"   "(kN)"        1.0    0.0       2
+"Fair4Ang"   "(deg)"       1.0    0.0       2
+"Anch4Ten"   "(kN)"        1.0    0.0       2
+"Anch4Ang"   "(deg)"       1.0    0.0       2
+"Fair5Ten"   "(kN)"        1.0    0.0       2
+"Fair5Ang"   "(deg)"       1.0    0.0       2
+"Anch5Ten"   "(kN)"        1.0    0.0       2
+"Anch5Ang"   "(deg)"       1.0    0.0       2
+"Fair6Ten"   "(kN)"        1.0    0.0       2
+"Fair6Ang"   "(deg)"       1.0    0.0       2
+"Anch6Ten"   "(kN)"        1.0    0.0       2
+"Anch6Ang"   "(deg)"       1.0    0.0       2
+"Fair7Ten"   "(kN)"        1.0    0.0       2
+"Fair7Ang"   "(deg)"       1.0    0.0       2
+"Anch7Ten"   "(kN)"        1.0    0.0       2
+"Anch7Ang"   "(deg)"       1.0    0.0       2
+"Fair8Ten"   "(kN)"        1.0    0.0       2
+"Fair8Ang"   "(deg)"       1.0    0.0       2
+"Anch8Ten"   "(kN)"        1.0    0.0       2
+"Anch8Ang"   "(deg)"       1.0    0.0       2
+"TipSpdRat"  "(-)"         1.0    0.0       2
+"RotCp"      "(-)"         1.0    0.0       2
+"RotCt"      "(-)"         1.0    0.0       2
+"RotCq"      "(-)"         1.0    0.0       2
+-----  Calculated Channels  ----------------------------------------------------
+3                 NumCChan          The number calculated channels to generate.
+1234567890        Seed              The integer seed for the random number generator (-2,147,483,648 to 2,147,483,647)
+Col_Title   Units    Equation       Put each field in quotes.  Titles and units are limited to 10 characters.  NumCChan rows of data follow.
+"abstest"  "(sec)"	 "abs(FileInfo.Time(:,50))"
+"RootFMxy1" "(kN)"   "sqrt( FileInfo.Time(:,50).^2 + FileInfo.Time(:,51).^2 )"
+"RootMMxy1" "(kN·m)" "sqrt( FileInfo.Time(:,53).^2 + FileInfo.Time(:,54).^2 )"
+-----  Extreme Events  ---------------------------------------------------------
+4                 NumEETables       Number of tables of extreme events.  Must be > 0.
+0                 NumEECharts      Number of charts of extreme events.
+false             FindPeaks         Should we use the peak finder?
+true              WrEEvtsTxt        Write the extreme-event tables to a plain-text file?
+true              WrEEvtsXLS        Write the extreme-event tables to an Excel file?
+"xlsx"            XLStype           Type of Excel file ("xls"=>2003, "xlsx"=>2007).
+7                 ThemeColor        Excel color theme to use.  In Excel 2007, it is the column of the color chart (1-10).
+0.0               HeadTnS           Tint and shade of the header area (-1.0 to 1.0), with -1 being darkest and 1 lightest.
+0.5               DiagTnS           Tint and shade of the diagonal (-1.0 to 1.0), with -1 being darkest and 1 lightest.
+TableName           #Chans    ChanList                #InfoChans     InfoChanList    (NumEETables rows of data follow)
+"Tip Deflections"       6      23  24  26  27  29  30      3         1 2 5
+"Tower Clearances"      3      32  33  34                  3         1 2 5
+"Blade-1 Loads"         4     134  52 135  55              3         1 2 5
+"Time Test"				1	$abstest$ 					   3         1 2 5
+-----  Input Files  ------------------------------------------------------------
+2                 NumDLCs           The number of Design Load Cases
+2  1.1   1.35   1.5   1.7    "Normal Operation"         (Normal Operation: NumDLCfiles(1), PSF1, PSF2, PSF3, PSF4)
+  "DLC2.3_1.out"
+  "DLC2.3_2.out"
+1  2   1.34   1.5   1.7    "Normal Operation"         (Normal Operation: NumDLCfiles(1), PSF1, PSF2, PSF3, PSF4)  
+  "DLC2.3_3.out"
+==EOF==                             DO NOT REMOVE OR CHANGE.  MUST COME JUST AFTER LAST LINE OF VALID INPUT.
