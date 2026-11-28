@@ -74,8 +74,8 @@ True                   GenTiStp      - Method to stop  the generator {True: time
 ---------------------- CABLE CONTROL -------------------------------------------
 0                      CCmode        - Cable control mode {0: none, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
 ---------------------- BLADED INTERFACE ---------------------------------------- [used only with Bladed Interface]
-"ServoData\libdiscon_v2-70.dll" DLL_FileName - Name/location of the dynamic library {.dll [Windows] or .so [Linux]} in the Bladed-DLL format (-) [used only with Bladed Interface]
-"ServoData\OptRenova_8MW_DISCON_v2-74.IN" DLL_InFile - Name of input file sent to the DLL (-) [used only with Bladed Interface]
+"ServoData\libdiscon" DLL_FileName - Name/location of the dynamic library {.dll [Windows] or .so [Linux]} in the Bladed-DLL format (-) [used only with Bladed Interface]
+"ServoData\OptRenova_8MW_DISCON.IN" DLL_InFile - Name of input file sent to the DLL (-) [used only with Bladed Interface]
 "DISCON"               DLL_ProcName  - Name of procedure in DLL to be called (-) [case sensitive; used only with DLL Interface]
 Default                DLL_DT        - Communication interval for dynamic library (s) (or "default") [used only with Bladed Interface]
 False                  DLL_Ramp      - Whether a linear ramp should be used between DLL_DT time steps [introduces time shift when true] (flag)
